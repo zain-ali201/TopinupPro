@@ -1,0 +1,6 @@
+framework module Pods_Neighboorhood_iOS_ServicesTests {
+  umbrella header "Pods-Neighboorhood-iOS-ServicesTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
