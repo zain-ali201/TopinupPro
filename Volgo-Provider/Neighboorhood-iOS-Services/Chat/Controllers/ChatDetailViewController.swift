@@ -54,7 +54,7 @@ class ChatDetailViewController: UIViewController {
     var providerID = ""
      var clientID = ""
     
-    var clientName : String!
+    var clientName = ""
     //var providerCategory : String!
     var clientImageURL : String!
     
@@ -481,11 +481,11 @@ class ChatDetailViewController: UIViewController {
         var permissionCheck: Bool = false
         
         switch AVAudioSession.sharedInstance().recordPermission {
-        case AVAudioSessionRecordPermission.granted:
+        case AVAudioSession.RecordPermission.granted:
             permissionCheck = true
-        case AVAudioSessionRecordPermission.denied:
+        case AVAudioSession.RecordPermission.denied:
             permissionCheck = false
-        case AVAudioSessionRecordPermission.undetermined:
+        case AVAudioSession.RecordPermission.undetermined:
             AVAudioSession.sharedInstance().requestRecordPermission({ (granted) in
                 if granted {
                     permissionCheck = true
@@ -583,8 +583,7 @@ extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
         let message = queryMessages[indexPath.row]
         if (message.type != "Client") {
             if message.isTextMessage {
-                let cell = conversation.dequeueReusableCell(withIdentifier: RecieverCell.identifier, for: indexPath) as!
-                RecieverCell
+                let cell = conversation.dequeueReusableCell(withIdentifier: RecieverCell.identifier, for: indexPath) as! RecieverCell
                 cell.tag = indexPath.row
                 ChatCellManager.shared.set(chatMessage: message, for: cell)
                 return cell

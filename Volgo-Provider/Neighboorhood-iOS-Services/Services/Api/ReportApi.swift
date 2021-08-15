@@ -23,8 +23,6 @@ class ReportApi: NSObject {
     
     func reportWith(with params : NSMutableDictionary,detailImages : [UIImage], completion: @escaping ((_ success: Bool, _ message : String) -> Void))
     {
-        
-        
         Alamofire.upload(multipartFormData: { MultipartFormData in
             
             print(params)
