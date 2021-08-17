@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,7 +11,7 @@
         <!--Chat Detail View Controller-->
         <scene sceneID="Lor-cX-b3C">
             <objects>
-                <viewController storyboardIdentifier="ChatDetailViewController" hidesBottomBarWhenPushed="YES" id="D2I-H3-UpM" customClass="ChatDetailViewController" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatDetailViewController" hidesBottomBarWhenPushed="YES" id="D2I-H3-UpM" customClass="ChatDetailViewController" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bdw-6a-qOq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,14 +20,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverCell" rowHeight="115" id="NZS-bm-fTV" customClass="RecieverCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="115"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverCell" rowHeight="115" id="NZS-bm-fTV" customClass="RecieverCell" customModule="Neighboorhood_iOS_Services">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZS-bm-fTV" id="0fu-Z1-AXs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88L-Bn-fiw" customClass="ChatRightTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88L-Bn-fiw" customClass="ChatRightTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="388" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -98,8 +98,8 @@
                                                 <constraint firstItem="dek-LS-ee5" firstAttribute="top" secondItem="0fu-Z1-AXs" secondAttribute="top" constant="5" id="zUA-q1-euE"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="LWy-Vt-BWT"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="LWy-Vt-BWT"/>
                                         <connections>
                                             <outlet property="cellLbl" destination="ZSE-HL-HyM" id="UF2-Yr-T3c"/>
                                             <outlet property="cellView" destination="dek-LS-ee5" id="syH-Vs-vCm"/>
@@ -109,14 +109,14 @@
                                             <outlet property="viewWidth" destination="Qq2-bt-HYY" id="Fhf-Jo-ZJ7"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverAudioCell" rowHeight="100" id="fuh-2C-efM" customClass="RecieverAudioCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="139.5" width="414" height="100"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverAudioCell" rowHeight="100" id="fuh-2C-efM" customClass="RecieverAudioCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="143" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fuh-2C-efM" id="D2D-0f-LJ0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-tB-D2x" customClass="ChatRightTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-tB-D2x" customClass="ChatRightTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="388" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -128,7 +128,7 @@
                                                     <rect key="frame" x="108" y="5" width="290" height="66"/>
                                                     <subviews>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IG0-JM-RdM">
-                                                            <rect key="frame" x="42" y="31" width="240" height="4"/>
+                                                            <rect key="frame" x="42" y="32" width="240" height="2"/>
                                                         </progressView>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P6Y-US-CCf">
                                                             <rect key="frame" x="0.0" y="11" width="44" height="44"/>
@@ -174,7 +174,7 @@
                                                                 <constraint firstAttribute="width" secondItem="E2V-4G-Szb" secondAttribute="height" multiplier="1:1" id="mJp-o9-kPq"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-2f-3K7">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aiz-2f-3K7">
                                                             <rect key="frame" x="0.0" y="0.0" width="290" height="66"/>
                                                             <connections>
                                                                 <action selector="mediaTappedAction:" destination="fuh-2C-efM" eventType="touchUpInside" id="Yd3-yn-F8g"/>
@@ -240,8 +240,8 @@
                                                 <constraint firstItem="iny-aI-jKq" firstAttribute="bottom" secondItem="m1q-q2-s2y" secondAttribute="bottom" id="wSt-wD-7u2"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="zWR-3Q-ZPT"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="zWR-3Q-ZPT"/>
                                         <connections>
                                             <outlet property="cellView" destination="m1q-q2-s2y" id="qfx-uj-16v"/>
                                             <outlet property="dateLbl" destination="Cgg-6e-NFS" id="4kp-Rl-2mE"/>
@@ -253,8 +253,8 @@
                                             <outlet property="userImage" destination="B1h-pU-m5W" id="Yed-fm-Psd"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverMediaCell" rowHeight="234" id="18i-i4-Cvs" customClass="RecieverMediaCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="239.5" width="414" height="234"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverMediaCell" rowHeight="234" id="18i-i4-Cvs" customClass="RecieverMediaCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="243" width="414" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="18i-i4-Cvs" id="9pf-zH-tP2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
@@ -278,7 +278,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-eL-scU" customClass="ChatRightTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y7e-eL-scU" customClass="ChatRightTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="388" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -329,7 +329,7 @@
                                                         <constraint firstAttribute="height" constant="20" id="kjj-Qm-ZbH"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-Wh-MrP">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-Wh-MrP">
                                                     <rect key="frame" x="198" y="5" width="200" height="200"/>
                                                     <connections>
                                                         <action selector="mediaTappedAction:" destination="18i-i4-Cvs" eventType="touchUpInside" id="5Bc-zZ-w5g"/>
@@ -368,8 +368,8 @@
                                                 <constraint firstItem="bwr-Wh-MrP" firstAttribute="leading" secondItem="PvW-iH-6rx" secondAttribute="leading" id="w7D-jW-yKT"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="bg0-UQ-tFj"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="bg0-UQ-tFj"/>
                                         <connections>
                                             <outlet property="dateLbl" destination="HXc-t4-Ggh" id="wYL-WC-OBf"/>
                                             <outlet property="durationLbl" destination="WVE-B4-3A5" id="rLa-7x-CsL"/>
@@ -380,13 +380,13 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderCell" rowHeight="115" id="Gkn-Ar-RVu" customClass="SenderCell" customModule="Neighboorhood_iOS_Services">
-                                        <rect key="frame" x="0.0" y="473.5" width="414" height="115"/>
+                                        <rect key="frame" x="0.0" y="477" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gkn-Ar-RVu" id="U2N-L1-4Dv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9W-Ve-Q0V" customClass="ChatLeftTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="I9W-Ve-Q0V" customClass="ChatLeftTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="6" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -448,8 +448,8 @@
                                                 <constraint firstItem="iVv-YV-lEg" firstAttribute="leading" secondItem="I9W-Ve-Q0V" secondAttribute="trailing" constant="-10" id="qKu-04-GeU"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="hN6-cl-Vac"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="hN6-cl-Vac"/>
                                         <connections>
                                             <outlet property="cellLbl" destination="Aay-M1-hDZ" id="Pts-hX-PBP"/>
                                             <outlet property="cellView" destination="iVv-YV-lEg" id="5tm-Zw-X15"/>
@@ -458,14 +458,14 @@
                                             <outlet property="viewWidth" destination="y5e-vD-nIL" id="rsc-b0-s2k"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderAudioCell" rowHeight="100" id="zcf-CT-WzV" customClass="SenderAudioCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="588.5" width="414" height="100"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderAudioCell" rowHeight="100" id="zcf-CT-WzV" customClass="SenderAudioCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="592" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zcf-CT-WzV" id="bxC-Wz-Mwt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZF-4E-9qP" customClass="ChatLeftTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gZF-4E-9qP" customClass="ChatLeftTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="6" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -477,7 +477,7 @@
                                                     <rect key="frame" x="16" y="5" width="270" height="66"/>
                                                     <subviews>
                                                         <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ldU-cC-35L">
-                                                            <rect key="frame" x="42" y="31" width="220" height="4"/>
+                                                            <rect key="frame" x="42" y="32" width="220" height="2"/>
                                                         </progressView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lP3-2S-tGp">
                                                             <rect key="frame" x="235.5" y="8" width="26.5" height="12"/>
@@ -523,7 +523,7 @@
                                                                 <constraint firstAttribute="width" secondItem="moJ-9U-Vij" secondAttribute="height" multiplier="1:1" id="1Ot-OF-5M8"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-Uv-WPb">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7J3-Uv-WPb">
                                                             <rect key="frame" x="0.0" y="0.0" width="270" height="66"/>
                                                             <connections>
                                                                 <action selector="mediaTappedAction:" destination="zcf-CT-WzV" eventType="touchUpInside" id="UJF-rU-uHD"/>
@@ -577,8 +577,8 @@
                                                 <constraint firstItem="7im-Q7-f7q" firstAttribute="leading" secondItem="gZF-4E-9qP" secondAttribute="trailing" constant="-10" id="y71-vU-G7j"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="T1Y-F6-Uk6"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="T1Y-F6-Uk6"/>
                                         <connections>
                                             <outlet property="cellView" destination="7im-Q7-f7q" id="FRQ-Bl-1gE"/>
                                             <outlet property="dateLbl" destination="xED-7U-8Ki" id="j72-d7-Iit"/>
@@ -589,14 +589,14 @@
                                             <outlet property="userImage" destination="uHD-bA-1ea" id="ggf-BI-j4T"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderMediaCell" rowHeight="234" id="Eby-hk-0ga" customClass="SenderMediaCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="688.5" width="414" height="234"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderMediaCell" rowHeight="234" id="Eby-hk-0ga" customClass="SenderMediaCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="692" width="414" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eby-hk-0ga" id="C71-NW-IK7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-Cw-0cO" customClass="ChatLeftTail" customModule="Topinup_Professionals" customModuleProvider="target">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-Cw-0cO" customClass="ChatLeftTail" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
                                                     <rect key="frame" x="6" y="5" width="20" height="20"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -666,7 +666,7 @@
                                                         <action selector="playBtnAction:" destination="Eby-hk-0ga" eventType="touchUpInside" id="CHI-fd-Eo9"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-64-05f">
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBI-64-05f">
                                                     <rect key="frame" x="107" y="17" width="200" height="200"/>
                                                     <connections>
                                                         <action selector="mediaTappedAction:" destination="Eby-hk-0ga" eventType="touchUpInside" id="FLs-KY-Qnj"/>
@@ -694,8 +694,8 @@
                                                 <constraint firstAttribute="bottom" secondItem="iRy-fE-Qsy" secondAttribute="bottom" constant="9" id="xfs-zV-nnu"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <viewLayoutGuide key="safeArea" id="ea7-Bo-kAP"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <viewLayoutGuide key="safeArea" id="ea7-Bo-kAP"/>
                                         <connections>
                                             <outlet property="dateLbl" destination="iRy-fE-Qsy" id="JKt-rh-puM"/>
                                             <outlet property="durationLbl" destination="wo0-sG-hul" id="n2D-as-mD2"/>
@@ -726,7 +726,7 @@
                                                 <real key="value" value="20"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="groupTableViewBackgroundColor"/>
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -834,7 +834,7 @@
                                                 <color key="value" red="0.0039215686269999999" green="0.66666666669999997" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                <color key="value" systemColor="groupTableViewBackgroundColor"/>
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="1"/>
@@ -926,7 +926,7 @@
                                         <real key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" systemColor="groupTableViewBackgroundColor"/>
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
@@ -934,7 +934,6 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="K8R-Y2-NEP"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="K8R-Y2-NEP" firstAttribute="trailing" secondItem="QTw-hA-1wa" secondAttribute="trailing" constant="8" id="3Ik-DE-OwC"/>
@@ -949,6 +948,7 @@
                             <constraint firstItem="JPb-YE-6IK" firstAttribute="top" secondItem="K8R-Y2-NEP" secondAttribute="top" id="lRS-fD-D2J"/>
                             <constraint firstItem="Ruk-M3-jaa" firstAttribute="bottom" secondItem="K8R-Y2-NEP" secondAttribute="bottom" id="v5Q-Hy-kEU"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="K8R-Y2-NEP"/>
                     </view>
                     <navigationItem key="navigationItem" id="hmF-kO-5xT">
                         <barButtonItem key="backBarButtonItem" title=" " id="IJA-VF-tbT"/>
@@ -973,7 +973,7 @@
         <!--Chat Media Player Controller-->
         <scene sceneID="6P6-nT-XKO">
             <objects>
-                <viewController storyboardIdentifier="ChatMediaPlayerController" id="vvg-Lu-JRR" customClass="ChatMediaPlayerController" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatMediaPlayerController" id="vvg-Lu-JRR" customClass="ChatMediaPlayerController" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2vw-3C-V4O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -986,7 +986,6 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                             </imageView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="Xlx-9M-VA1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6jN-c6-fDI" firstAttribute="top" secondItem="Xlx-9M-VA1" secondAttribute="top" id="Ahz-r5-nHl"/>
@@ -998,6 +997,7 @@
                             <constraint firstItem="6ro-Mx-hPn" firstAttribute="trailing" secondItem="Xlx-9M-VA1" secondAttribute="trailing" id="vCp-yH-7uP"/>
                             <constraint firstItem="6jN-c6-fDI" firstAttribute="leading" secondItem="Xlx-9M-VA1" secondAttribute="leading" id="vfv-6A-oBi"/>
                         </constraints>
+                        <viewLayoutGuide key="safeArea" id="Xlx-9M-VA1"/>
                     </view>
                     <navigationItem key="navigationItem" id="kof-Ed-T7j">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="Os0-uC-1KN">
@@ -1048,14 +1048,9 @@
             <point key="canvasLocation" x="911.59420289855075" y="51.5625"/>
         </scene>
     </scenes>
-    <designables>
-        <designable name="HLv-PS-Dgt">
-            <size key="intrinsicContentSize" width="-1" height="30"/>
-        </designable>
-    </designables>
     <resources>
         <image name="attach" width="42.666667938232422" height="42.666667938232422"/>
-        <image name="camera" width="16" height="16"/>
+        <image name="camera" width="42.666667938232422" height="42.666667938232422"/>
         <image name="cancel" width="42.666667938232422" height="42.666667938232422"/>
         <image name="chatPause" width="21.333333969116211" height="21.333333969116211"/>
         <image name="chatPlay" width="21.333333969116211" height="21.333333969116211"/>
@@ -1066,8 +1061,5 @@
         <image name="playWhite" width="21.333333969116211" height="21.333333969116211"/>
         <image name="send" width="42.666667938232422" height="42.666667938232422"/>
         <image name="sendAudio" width="42.666667938232422" height="42.666667938232422"/>
-        <systemColor name="groupTableViewBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
     </resources>
 </document>

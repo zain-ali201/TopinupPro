@@ -218,7 +218,7 @@ class ProfileViewController: UITableViewController {
         let vc = storyBoard.instantiateViewController(withIdentifier: "ChatDetailViewController") as! ChatDetailViewController
         vc.jobID          = jobID
         vc.clientID       = clientID
-        vc.clientName     = self.userName.text ?? ""
+        vc.clientName     = self.userName.text
         //vc.providerCategory = self.userCategory.text
         vc.clientImageURL = self.userProfileImageURL
         self.navigationController?.pushViewController(vc, animated: true)
