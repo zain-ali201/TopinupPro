@@ -54,7 +54,7 @@ class ChatDetailViewController: UIViewController {
     var providerID = ""
      var clientID = ""
     
-    var clientName : String!
+    var clientName : String = ""
     //var providerCategory : String!
     var clientImageURL : String!
     
@@ -588,13 +588,16 @@ extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.tag = indexPath.row
                 ChatCellManager.shared.set(chatMessage: message, for: cell)
                 return cell
-            } else {
-                if message.mediaType == .audio || message.mediaType == .file {
-                    let cell = conversation.dequeueReusableCell(withIdentifier: RecieverAudioCell.identifier, for: indexPath) as!
-                    RecieverAudioCell
+            }
+            else
+            {
+                if message.mediaType == .audio || message.mediaType == .file
+                {
+                    let cell = conversation.dequeueReusableCell(withIdentifier: RecieverAudioCell.identifier, for: indexPath) as! RecieverAudioCell
                     cell.delegate = self
                     cell.tag = indexPath.row
-                    if indexPath.row == currentPlayingIndex {
+                    if indexPath.row == currentPlayingIndex
+                    {
                         cell.progressView.progress = Float(currentPlayingIndexTime)
                         cell.playBtn.isSelected = true
                     } else {
@@ -603,7 +606,9 @@ extension ChatDetailViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                     ChatCellManager.shared.set(chatMessage: message, for: cell)
                     return cell
-                } else {
+                }
+                else
+                {
                     let cell = conversation.dequeueReusableCell(withIdentifier: RecieverMediaCell.identifier, for: indexPath) as!
                     RecieverMediaCell
                     cell.delegate = self

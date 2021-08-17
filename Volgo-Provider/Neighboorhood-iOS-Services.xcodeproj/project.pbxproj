@@ -24,7 +24,7 @@
 		18286F27231A37B200F300F5 /* ChatMediaPlayerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286F19231A37B200F300F5 /* ChatMediaPlayerController.swift */; };
 		18286F28231A37B200F300F5 /* ChatDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18286F1A231A37B200F300F5 /* ChatDetailViewController.swift */; };
 		182E776E2315A3CD008AD3B3 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182E776D2315A3CD008AD3B3 /* Place.swift */; };
-		18905FC1230C55AB0029C366 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18905FC0230C55AB0029C366 /* GoogleService-Info.plist */; };
+		18589D4426B828AC00B3D026 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18589D4326B828AC00B3D026 /* GoogleService-Info.plist */; };
 		18F3DA1623117E2300336129 /* UploadFileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F3DA1523117E2300336129 /* UploadFileApi.swift */; };
 		18F40D6223217A690077F1D1 /* Locale+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F40D6123217A690077F1D1 /* Locale+Extensions.swift */; };
 		18F40D6423217A740077F1D1 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F40D6323217A740077F1D1 /* UIImageView+Extensions.swift */; };
@@ -158,7 +158,7 @@
 		18286F19231A37B200F300F5 /* ChatMediaPlayerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatMediaPlayerController.swift; sourceTree = "<group>"; };
 		18286F1A231A37B200F300F5 /* ChatDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatDetailViewController.swift; sourceTree = "<group>"; };
 		182E776D2315A3CD008AD3B3 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
-		18905FC0230C55AB0029C366 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		18589D4326B828AC00B3D026 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Neighboorhood-iOS-Services/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		18F3DA1523117E2300336129 /* UploadFileApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadFileApi.swift; sourceTree = "<group>"; };
 		18F40D6123217A690077F1D1 /* Locale+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Locale+Extensions.swift"; sourceTree = "<group>"; };
 		18F40D6323217A740077F1D1 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		4A56108A1FE3FD3400B0FE1D /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		4A56108B1FE3FD3400B0FE1D /* MainRegistrationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainRegistrationVC.swift; sourceTree = "<group>"; };
 		4A5610901FE3FD7000B0FE1D /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		4A5610921FE3FDCB00B0FE1D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Login.storyboard; path = View/Login.storyboard; sourceTree = "<group>"; };
+		4A5610921FE3FDCB00B0FE1D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		4A5610961FE3FE2D00B0FE1D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4A5A12362186245D0010BFB7 /* JobDetailImagesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = JobDetailImagesView.xib; sourceTree = "<group>"; };
 		4A5A1238218624860010BFB7 /* JobDetailImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailImageView.swift; sourceTree = "<group>"; };
@@ -362,6 +362,16 @@
 				18286F1A231A37B200F300F5 /* ChatDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18589D4526B828D300B3D026 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				4A56104E1FE3986900B0FE1D /* LaunchScreen.storyboard */,
+				4A5610921FE3FDCB00B0FE1D /* Login.storyboard */,
+				4A5610491FE3986900B0FE1D /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		1F9FC1F32B962ABB68F323F0 /* Pods */ = {
@@ -522,6 +532,7 @@
 		4A5610391FE3986900B0FE1D = {
 			isa = PBXGroup;
 			children = (
+				18589D4326B828AC00B3D026 /* GoogleService-Info.plist */,
 				80BF541621CE4D9A000D7677 /* Kalma Chowk.gpx */,
 				4AC0AEA7206190BE00DC621E /* GoogleMaps.bundle */,
 				4A012EA71FE9349700F19878 /* Yamsol Office.gpx */,
@@ -548,6 +559,8 @@
 			isa = PBXGroup;
 			children = (
 				4A1BC48820CFDEB9008B8EFD /* Neighboorhood-iOS-Services.entitlements */,
+				4A5610961FE3FE2D00B0FE1D /* Assets.xcassets */,
+				18589D4526B828D300B3D026 /* Storyboards */,
 				18286F08231A37B200F300F5 /* Chat */,
 				180D00CB22FF345E00062953 /* Extensions */,
 				4A012EA91FE939BA00F19878 /* Custom Views */,
@@ -557,12 +570,7 @@
 				4A56108F1FE3FD7000B0FE1D /* Util */,
 				4A5610861FE3FD3400B0FE1D /* Controller */,
 				4A012E9A1FE8FA2B00F19878 /* TableViewCell */,
-				4A5610491FE3986900B0FE1D /* Main.storyboard */,
-				4A5610921FE3FDCB00B0FE1D /* Login.storyboard */,
-				4A56104E1FE3986900B0FE1D /* LaunchScreen.storyboard */,
 				4A5610511FE3986900B0FE1D /* Info.plist */,
-				18905FC0230C55AB0029C366 /* GoogleService-Info.plist */,
-				4A5610961FE3FE2D00B0FE1D /* Assets.xcassets */,
 			);
 			path = "Neighboorhood-iOS-Services";
 			sourceTree = "<group>";
@@ -772,6 +780,7 @@
 			files = (
 				18286F24231A37B200F300F5 /* Chat.storyboard in Resources */,
 				4AC0AEA8206190BE00DC621E /* GoogleMaps.bundle in Resources */,
+				18589D4426B828AC00B3D026 /* GoogleService-Info.plist in Resources */,
 				4A5610931FE3FDCC00B0FE1D /* Login.storyboard in Resources */,
 				4A012EA81FE9349700F19878 /* Yamsol Office.gpx in Resources */,
 				4ABF1B98206B8CE600D2BFA0 /* ChooseChoreCategory.xib in Resources */,
@@ -784,7 +793,6 @@
 				4A5A12372186245D0010BFB7 /* JobDetailImagesView.xib in Resources */,
 				4A5610971FE3FE2E00B0FE1D /* Assets.xcassets in Resources */,
 				4A56104B1FE3986900B0FE1D /* Main.storyboard in Resources */,
-				18905FC1230C55AB0029C366 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1216,15 +1224,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = H6FU4X6RK3;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV27K8UGQV;
 				INFOPLIST_FILE = "Neighboorhood-iOS-Services/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.volgo.provider;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topinup.provider;
 				PRODUCT_NAME = "Topinup Professionals";
 				PROVISIONING_PROFILE = "ba95b848-16e9-45a0-93bc-eabb797ba443";
-				PROVISIONING_PROFILE_SPECIFIER = "Topinup-Provider Dev v2";
+				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Dev v1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Neighboorhood-iOS-Services/External/Neighboorhood-iOS-Services-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -1242,15 +1251,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 4;
-				DEVELOPMENT_TEAM = H6FU4X6RK3;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WV27K8UGQV;
 				INFOPLIST_FILE = "Neighboorhood-iOS-Services/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.volgo.provider;
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.topinup.provider;
 				PRODUCT_NAME = "Topinup Professionals";
 				PROVISIONING_PROFILE = "ba95b848-16e9-45a0-93bc-eabb797ba443";
-				PROVISIONING_PROFILE_SPECIFIER = "Topinup-Provider Dist v2";
+				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Appstore v2";
 				SWIFT_OBJC_BRIDGING_HEADER = "Neighboorhood-iOS-Services/External/Neighboorhood-iOS-Services-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

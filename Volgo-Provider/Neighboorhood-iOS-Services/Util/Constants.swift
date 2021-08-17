@@ -67,7 +67,7 @@ struct URLConfiguration
         return headers
     }
     
-    static let googleAPIKey = "AIzaSyC4JOqbEZ1YzrUrH5dePNC-gtZY4EzdQbo"
+    static let googleAPIKey = "AIzaSyAqjJJvOXE9EsICkyesycFVDXbY4SXMrrA"
 //    AIzaSyC4JOqbEZ1YzrUrH5dePNC-gtZY4EzdQbo
     static let loginURL = serverURL + "/api/providers/signin" 
     static let signUpURL = serverURL + "/api/auth/provider"

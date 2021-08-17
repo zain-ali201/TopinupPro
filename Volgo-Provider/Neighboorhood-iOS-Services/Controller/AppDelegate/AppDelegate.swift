@@ -35,8 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        GMSServices.provideAPIKey("AIzaSyC4JOqbEZ1YzrUrH5dePNC-gtZY4EzdQbo")
-        GMSPlacesClient.provideAPIKey("AIzaSyC4JOqbEZ1YzrUrH5dePNC-gtZY4EzdQbo")
+        GMSServices.provideAPIKey(URLConfiguration.googleAPIKey)
+        GMSPlacesClient.provideAPIKey(URLConfiguration.googleAPIKey)
         IQKeyboardManager.shared.enable = true
         addNotificationObservers()
         Connection.checkInternet()
