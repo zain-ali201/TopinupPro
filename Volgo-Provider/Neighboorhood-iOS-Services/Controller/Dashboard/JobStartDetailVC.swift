@@ -90,7 +90,37 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         setupReportButton()
         self.viewInitializer()
         count = getJobTime()
-        updateTimeCounter()
+        
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.willResignActiveNotification, object: nil)
+        
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+
+    @objc func appMovedToBackground()
+    {
+        if timer.isValid
+        {
+            UserDefaults.standard.set(Date(), forKey: "lastDate")
+        }
+        else
+        {
+            UserDefaults.standard.set(nil, forKey: "lastDate")
+        }
+    }
+    
+    @objc func appMovedToForeground()
+    {
+        if timer.isValid
+        {
+            let date = UserDefaults.standard.object(forKey: "lastDate") as! Date
+            let elapsed = Date().timeIntervalSince(date)
+            count += Int(elapsed)
+        }
+        else
+        {
+            UserDefaults.standard.set(nil, forKey: "lastDate")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -325,8 +355,6 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     
     func viewAccordingToJobType() {
         
-        
-        
         if self.jobDetail.status == JobStatus.started.rawValue || self.jobDetail.status == JobStatus.completed.rawValue
         {
             if jobType.rawValue == JobType.hourly.rawValue
@@ -361,14 +389,11 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
             self.heightConstraintTimer.constant = 0
             self.viewBackgroundTimer.isHidden = true
         }
-        
         self.view.layoutIfNeeded()
     }
     
-    
-    
-    func setViewTimer() {
-        
+    func setViewTimer()
+    {
         if timerState.rawValue == TimerState.play.rawValue
         {
             if timer.isValid
@@ -407,6 +432,7 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     }
     
     @IBAction func btnBarRightAction(_ sender: Any) {
+        
     }
     
     func apiCallJobCancelledUpdate()
@@ -446,9 +472,11 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     }
     
     @IBAction func btnWithdrawAction(_ sender: Any) {
+        
     }
     
     @IBAction func btnUpdateQuoteAction(_ sender: Any) {
+        
     }
     
     @IBAction func btnPlayPauseAction(_ sender: Any) {
@@ -499,7 +527,8 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         self.performSegue(withIdentifier: "jobStartToEnRouteSegue", sender: nil)
     }
     
-    @objc func time() {
+    @objc func time()
+    {
         count += 1
         saveJobTime()
         self.lblTimer.text = self.formattedTime(totalSeconds: count)

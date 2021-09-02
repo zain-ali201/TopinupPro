@@ -729,7 +729,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
-				ORGANIZATIONNAME = yamsol;
+				ORGANIZATIONNAME = SprintSols;
 				TargetAttributes = {
 					4A5610411FE3986900B0FE1D = {
 						CreatedOnToolsVersion = 9.2;
@@ -1260,7 +1260,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.topinup.provider;
 				PRODUCT_NAME = "Topinup Professionals";
 				PROVISIONING_PROFILE = "ba95b848-16e9-45a0-93bc-eabb797ba443";
-				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Appstore v2";
+				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Dist v1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Neighboorhood-iOS-Services/External/Neighboorhood-iOS-Services-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

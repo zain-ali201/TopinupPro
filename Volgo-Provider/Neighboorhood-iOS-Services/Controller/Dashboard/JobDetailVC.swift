@@ -272,9 +272,7 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         if self.jobDetail.type == "hourly"
         {
             //imageBudget.image = UIImage(named: "watch")
-            
             let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
-            
             self.lblBudget.text = (self.jobDetail.currency)+" "+String(describing: formattedNumber!) + "/hr"
             
             //self.heightConstraintsImage.constant = 24

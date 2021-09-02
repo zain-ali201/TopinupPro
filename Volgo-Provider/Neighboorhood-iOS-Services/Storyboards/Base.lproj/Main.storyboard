@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -21,8 +22,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -32,7 +33,7 @@
         <!--HOME-->
         <scene sceneID="jFt-tS-XLE">
             <objects>
-                <viewController storyboardIdentifier="DashboardVC_ID" title="HOME" id="70K-sJ-mE0" customClass="DashboardVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardVC_ID" title="HOME" id="70K-sJ-mE0" customClass="DashboardVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mjX-2z-uyt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -137,7 +138,7 @@
                                                     <constraint firstAttribute="height" constant="4" id="PEk-hB-n1P"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqI-kK-OIC">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqI-kK-OIC">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="36"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                 <state key="normal" title="Jobs">
@@ -147,7 +148,7 @@
                                                     <action selector="btnJobsAction:" destination="70K-sJ-mE0" eventType="touchUpInside" id="bJd-UK-Fi5"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="y55-qP-udJ">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="y55-qP-udJ">
                                                 <rect key="frame" x="106" y="0.0" width="106" height="36"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                 <state key="normal" title="New Requests">
@@ -157,7 +158,7 @@
                                                     <action selector="btnNewRequestAction:" destination="70K-sJ-mE0" eventType="touchUpInside" id="wIC-Uf-c7Z"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yba-yD-HSb">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="yba-yD-HSb">
                                                 <rect key="frame" x="212" y="0.0" width="0.0" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" id="A7N-iZ-blR"/>
@@ -170,7 +171,7 @@
                                                     <action selector="btnPostponedAction:" destination="70K-sJ-mE0" eventType="touchUpInside" id="r8i-GJ-Y7d"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-BB-hdp">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTc-BB-hdp">
                                                 <rect key="frame" x="212" y="0.0" width="108" height="36"/>
                                                 <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                 <state key="normal" title="Accepted">
@@ -236,6 +237,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ref-xj-Xqj"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Zwi-sl-yYa" firstAttribute="leading" secondItem="mjX-2z-uyt" secondAttribute="leading" id="1Ip-1p-hx1"/>
@@ -250,7 +252,6 @@
                             <constraint firstItem="j7G-0a-ZVH" firstAttribute="top" secondItem="Zwi-sl-yYa" secondAttribute="bottom" id="eow-yv-Xyz"/>
                             <constraint firstItem="CgX-JO-rrD" firstAttribute="leading" secondItem="Ref-xj-Xqj" secondAttribute="leading" id="gli-dG-tdK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Ref-xj-Xqj"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="tlM-iY-JHE">
                         <barButtonItem key="backBarButtonItem" title=" " id="0Tg-M5-ynE"/>
@@ -291,7 +292,7 @@
         <!--Job Details-->
         <scene sceneID="TBN-Yb-qr5">
             <objects>
-                <viewController storyboardIdentifier="JobDetailVC_ID" id="p5e-wx-MP7" customClass="JobDetailVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JobDetailVC_ID" id="p5e-wx-MP7" customClass="JobDetailVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pay-Ti-n8j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -510,7 +511,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ryU-Ga-zGV" customClass="JobDetailCVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="ryU-Ga-zGV" customClass="JobDetailCVC" customModule="Topinup_Professionals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -543,7 +544,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zz0-t7-Z1t">
                                 <rect key="frame" x="10" y="479" width="300" height="40"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-dz-mBh">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KHi-dz-mBh">
                                         <rect key="frame" x="0.0" y="0.0" width="145" height="40"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -554,7 +555,7 @@
                                             <action selector="btnAcceptAction:" destination="p5e-wx-MP7" eventType="touchUpInside" id="SKM-la-RvZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0V-Z5-s4O">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0V-Z5-s4O">
                                         <rect key="frame" x="155" y="0.0" width="145" height="40"/>
                                         <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -565,7 +566,7 @@
                                             <action selector="btnQouteAction:" destination="p5e-wx-MP7" eventType="touchUpInside" id="1aO-ih-wxO"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIQ-Tb-DzS">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xIQ-Tb-DzS">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="16"/>
@@ -598,6 +599,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="y5p-hY-n78"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="y5p-hY-n78" firstAttribute="trailing" secondItem="seE-mw-wlF" secondAttribute="trailing" constant="10" id="0tg-ck-SmQ"/>
@@ -628,7 +630,6 @@
                             <constraint firstItem="VZV-Gz-5HZ" firstAttribute="top" secondItem="Uxp-Ia-Byt" secondAttribute="bottom" constant="5" id="i5k-MM-or8"/>
                             <constraint firstItem="seE-mw-wlF" firstAttribute="leading" secondItem="y5p-hY-n78" secondAttribute="leading" constant="10" id="kMH-JE-PMh"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="y5p-hY-n78"/>
                     </view>
                     <navigationItem key="navigationItem" title="Job Details" id="VGv-uK-YwV">
                         <barButtonItem key="backBarButtonItem" title=" " id="h6x-GA-nRW"/>
@@ -669,15 +670,15 @@
         <!--Side MenuVC-->
         <scene sceneID="BFE-te-cOa">
             <objects>
-                <tableViewController storyboardIdentifier="SideMenuVC_ID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrl-UD-una" customClass="SideMenuVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SideMenuVC_ID" automaticallyAdjustsScrollViewInsets="NO" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qrl-UD-una" customClass="SideMenuVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="45" sectionHeaderHeight="22" sectionFooterHeight="22" id="NZv-fq-2S9">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserNames" rowHeight="150" id="4OE-Y8-i5P" customClass="SideMenuTVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="320" height="150"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserNames" rowHeight="150" id="4OE-Y8-i5P" customClass="SideMenuTVC" customModule="Topinup_Professionals" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="320" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="4OE-Y8-i5P" id="g9M-cF-nOl">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
@@ -774,8 +775,8 @@
                                     <outlet property="lblName" destination="oS6-zK-b9B" id="vsw-lp-hgf"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="55" id="mvn-9G-1rF" customClass="SideMenuTVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="178" width="320" height="55"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="55" id="mvn-9G-1rF" customClass="SideMenuTVC" customModule="Topinup_Professionals" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="174.5" width="320" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvn-9G-1rF" id="yzu-Nv-TWl">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
@@ -866,7 +867,7 @@
         <!--Profile-->
         <scene sceneID="Lzh-Wp-2pL">
             <objects>
-                <viewController storyboardIdentifier="ProfileVC_ID" id="8DC-mD-GgY" customClass="ProfileVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileVC_ID" id="8DC-mD-GgY" customClass="ProfileVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YvM-Ba-Pne">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="574"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1128,7 +1129,7 @@
                                                     </imageView>
                                                     <view clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ae4-nr-erb">
                                                         <rect key="frame" x="0.0" y="40" width="80" height="40"/>
-                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                                     </view>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="clq-oA-0Gu">
                                                         <rect key="frame" x="27.5" y="47.5" width="25" height="25"/>
@@ -1171,7 +1172,7 @@
                                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="10" maxY="0.0"/>
                                                         <state key="normal">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="titleColor" systemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="updateCategoryBtn:" destination="8DC-mD-GgY" eventType="touchUpInside" id="dQJ-0M-vcg"/>
@@ -1311,11 +1312,11 @@
                                                             <constraint firstAttribute="height" constant="24" id="qyW-5U-Vld"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g37-Wp-Uqz">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g37-Wp-Uqz">
                                                         <rect key="frame" x="28" y="0.0" width="264" height="0.0"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <state key="normal">
-                                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="titleColor" systemColor="darkTextColor"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="changeNotificationSetting:" destination="8DC-mD-GgY" eventType="touchUpInside" id="0LM-Gc-YR8"/>
@@ -1366,6 +1367,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="xVK-Ue-d27"/>
                         <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="hPQ-VO-7FO" secondAttribute="trailing" id="6vE-nc-2N6"/>
@@ -1380,7 +1382,6 @@
                             <constraint firstItem="1kL-Ot-sBG" firstAttribute="top" secondItem="xVK-Ue-d27" secondAttribute="top" id="jtE-zY-MFN"/>
                             <constraint firstItem="hPQ-VO-7FO" firstAttribute="top" secondItem="YvM-Ba-Pne" secondAttribute="top" id="sfc-J4-eGk"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="xVK-Ue-d27"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Wmo-8h-fra">
                         <barButtonItem key="backBarButtonItem" title=" " id="US1-Yc-5wx"/>
@@ -1462,7 +1463,7 @@
         <!--Enter Your Quotation-->
         <scene sceneID="1Ha-Ow-y0p">
             <objects>
-                <viewController storyboardIdentifier="CreateQuotationVC_ID" id="DRx-tf-xqE" customClass="CreateQuotationVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CreateQuotationVC_ID" id="DRx-tf-xqE" customClass="CreateQuotationVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Qy-ds-BYb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1510,7 +1511,7 @@
                                     <constraint firstAttribute="trailing" secondItem="bvL-bE-5aH" secondAttribute="trailing" constant="8" id="rGw-r8-I9v"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBv-BE-RNR">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NBv-BE-RNR">
                                 <rect key="frame" x="16" y="468" width="288" height="40"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1534,6 +1535,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="NiG-dG-0co"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Vrm-4J-gyo" firstAttribute="top" secondItem="Ylk-F2-Idz" secondAttribute="bottom" constant="8" id="8Ue-Yj-CFC"/>
@@ -1549,7 +1551,6 @@
                             <constraint firstItem="Ylk-F2-Idz" firstAttribute="top" secondItem="8eO-Ff-JlE" secondAttribute="bottom" constant="15" id="rHa-UR-Qg6"/>
                             <constraint firstItem="8eO-Ff-JlE" firstAttribute="leading" secondItem="NiG-dG-0co" secondAttribute="leading" constant="16" id="z70-Qt-LiR"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="NiG-dG-0co"/>
                     </view>
                     <navigationItem key="navigationItem" title="Enter Your Quotation" id="cZq-NP-Eha">
                         <barButtonItem key="backBarButtonItem" title=" " id="bxt-U9-7uZ"/>
@@ -1570,7 +1571,7 @@
         <!--My Jobs-->
         <scene sceneID="3oB-HV-yWs">
             <objects>
-                <viewController storyboardIdentifier="MyJobsVC_ID" id="zGp-5z-4Vp" customClass="MyJobsVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MyJobsVC_ID" id="zGp-5z-4Vp" customClass="MyJobsVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vs2-vu-9tG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1624,7 +1625,7 @@
                                             <constraint firstAttribute="height" constant="4" id="rDR-0y-FEx"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usq-3L-MDA" userLabel="BtnCurrentJobs">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="usq-3L-MDA" userLabel="BtnCurrentJobs">
                                         <rect key="frame" x="0.0" y="0.0" width="159.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                         <state key="normal" title="Completed">
@@ -1634,7 +1635,7 @@
                                             <action selector="btnCurrentJobAction:" destination="zGp-5z-4Vp" eventType="touchUpInside" id="ntF-03-5YQ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od1-f0-xwE" userLabel="BtnHistory">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Od1-f0-xwE" userLabel="BtnHistory">
                                         <rect key="frame" x="159.5" y="0.0" width="160.5" height="34"/>
                                         <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
                                         <state key="normal" title="Cancelled">
@@ -1714,12 +1715,13 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have no history" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ro-vp-raj">
-                                <rect key="frame" x="85.5" y="252" width="149.5" height="20.5"/>
+                                <rect key="frame" x="86" y="252" width="148.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gG3-S2-mX6"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="zAf-Bg-a24" firstAttribute="leading" secondItem="gG3-S2-mX6" secondAttribute="leading" constant="8" id="1De-Nk-fcO"/>
@@ -1742,7 +1744,6 @@
                             <constraint firstItem="neQ-fI-VTd" firstAttribute="leading" secondItem="gG3-S2-mX6" secondAttribute="leading" id="p0W-ak-DQg"/>
                             <constraint firstItem="Vtc-W2-8SL" firstAttribute="top" secondItem="zAf-Bg-a24" secondAttribute="bottom" constant="8" id="wZW-od-j4t"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gG3-S2-mX6"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Jobs" id="F7I-qr-E5A">
                         <barButtonItem key="backBarButtonItem" title=" " id="Hfc-ME-ghZ"/>
@@ -1799,7 +1800,7 @@
         <!--Job Details-->
         <scene sceneID="1aL-2G-L3H">
             <objects>
-                <viewController storyboardIdentifier="JobStartDetailVC_ID" id="sN9-Kp-eLi" customClass="JobStartDetailVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JobStartDetailVC_ID" id="sN9-Kp-eLi" customClass="JobStartDetailVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2uo-KO-Yai">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="956"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1910,7 +1911,7 @@
                                             <constraint firstAttribute="height" constant="26" id="hWb-l4-OSW"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-fv-CBd">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9aK-fv-CBd">
                                         <rect key="frame" x="212" y="8" width="100" height="40"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -1992,7 +1993,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Nco-u6-zoh" customClass="JobDetailCVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="Nco-u6-zoh" customClass="JobDetailCVC" customModule="Topinup_Professionals" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="55" height="55"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -2043,7 +2044,7 @@
                                             <constraint firstAttribute="width" constant="1" id="eCf-eo-IgN"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIM-wd-agH">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bIM-wd-agH">
                                         <rect key="frame" x="16" y="0.0" width="135.5" height="44"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2057,7 +2058,7 @@
                                             <action selector="btnUpdateQuoteAction:" destination="sN9-Kp-eLi" eventType="touchUpInside" id="aub-IG-eh1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7q-DG-WsI">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b7q-DG-WsI">
                                         <rect key="frame" x="168.5" y="0.0" width="135.5" height="44"/>
                                         <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2089,7 +2090,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kgp-Pu-rIf" userLabel="StartWork">
                                 <rect key="frame" x="0.0" y="900" width="320" height="56"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekC-Bd-f80">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ekC-Bd-f80">
                                         <rect key="frame" x="173" y="4" width="131" height="40"/>
                                         <color key="backgroundColor" red="0.15686274510000001" green="0.15686274510000001" blue="0.15686274510000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2110,7 +2111,7 @@
                                             <constraint firstAttribute="width" constant="10" id="d4D-FM-nnd"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-vd-SID">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSC-vd-SID">
                                         <rect key="frame" x="16" y="4" width="131" height="40"/>
                                         <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -2167,7 +2168,7 @@
                                                     <action selector="btnPlayPauseAction:" destination="sN9-Kp-eLi" eventType="touchUpInside" id="OEj-IO-aVY"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o8-ra-cmk">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9o8-ra-cmk">
                                                 <rect key="frame" x="70" y="-21" width="43" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="UGG-f8-8sx"/>
@@ -2178,7 +2179,7 @@
                                                     <action selector="btnPauseAction:" destination="sN9-Kp-eLi" eventType="touchUpInside" id="uGa-hE-Q1K"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yl-ap-Eh0">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yl-ap-Eh0">
                                                 <rect key="frame" x="191" y="-21" width="43" height="46"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="46" id="HLW-lN-6sG"/>
@@ -2303,6 +2304,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Npa-Pe-9xy"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="N0o-P6-fhK" firstAttribute="leading" secondItem="Npa-Pe-9xy" secondAttribute="leading" id="0Qv-bo-6ig"/>
@@ -2338,7 +2340,6 @@
                             <constraint firstItem="3l5-Ti-1VN" firstAttribute="top" secondItem="D1U-Tw-cUt" secondAttribute="bottom" constant="8" id="u6U-uy-eH4"/>
                             <constraint firstItem="DhB-18-Tt8" firstAttribute="top" secondItem="5Nl-Ef-N4d" secondAttribute="bottom" id="y6G-cf-KGr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="Npa-Pe-9xy"/>
                     </view>
                     <navigationItem key="navigationItem" title="Job Details" id="Mk8-en-lxe">
                         <barButtonItem key="backBarButtonItem" title=" " id="txd-Im-pi4"/>
@@ -2400,7 +2401,7 @@
         <!--Chat-->
         <scene sceneID="rLb-oY-GUf">
             <objects>
-                <viewController storyboardIdentifier="ProposedJobVC_ID" id="tpj-oi-p8v" customClass="ProposedJobVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProposedJobVC_ID" id="tpj-oi-p8v" customClass="ProposedJobVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rSV-7b-zhX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2436,6 +2437,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="XUZ-6W-R4N"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="t3r-5U-RIE" firstAttribute="top" secondItem="rSV-7b-zhX" secondAttribute="top" id="3xV-s6-bAK"/>
@@ -2450,7 +2452,6 @@
                             <constraint firstItem="SBZ-Bj-vsA" firstAttribute="top" secondItem="T98-q9-Kb2" secondAttribute="bottom" constant="8" id="gQq-sa-0dE"/>
                             <constraint firstItem="T98-q9-Kb2" firstAttribute="leading" secondItem="XUZ-6W-R4N" secondAttribute="leading" id="mDA-2u-T5z"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="XUZ-6W-R4N"/>
                     </view>
                     <navigationItem key="navigationItem" title="Chat" id="HbA-hZ-vpE">
                         <barButtonItem key="backBarButtonItem" title=" " id="QYP-5E-hBQ"/>
@@ -2498,7 +2499,7 @@
         <!--ReceiptVC-->
         <scene sceneID="gT3-UO-aSU">
             <objects>
-                <viewController storyboardIdentifier="ReceiptVC_ID_OLD" id="Xih-33-vZr" customClass="ReceiptVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptVC_ID_OLD" id="Xih-33-vZr" customClass="ReceiptVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="deu-VW-Xaf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2537,7 +2538,7 @@
                                     <constraint firstItem="jQy-XV-2Tk" firstAttribute="top" secondItem="oQs-2C-BH4" secondAttribute="top" constant="12" id="wBx-y9-jSx"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efu-0G-wxB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efu-0G-wxB">
                                 <rect key="frame" x="16" y="506" width="288" height="46"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -2822,6 +2823,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="4jk-xz-6BR"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="8vc-oS-BIM" secondAttribute="trailing" id="BZ7-mM-03k"/>
@@ -2839,7 +2841,6 @@
                             <constraint firstItem="Omq-W0-eky" firstAttribute="top" secondItem="oQs-2C-BH4" secondAttribute="bottom" constant="12" id="l6x-f8-yyh"/>
                             <constraint firstItem="4jk-xz-6BR" firstAttribute="trailing" secondItem="efu-0G-wxB" secondAttribute="trailing" constant="16" id="yRk-hd-MMy"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="4jk-xz-6BR"/>
                     </view>
                     <navigationItem key="navigationItem" id="f1c-p5-zb0"/>
                     <connections>
@@ -2863,7 +2864,7 @@
         <!--Job Receipt-->
         <scene sceneID="ztn-Sy-jG0">
             <objects>
-                <viewController storyboardIdentifier="ReceiptVC_ID" id="DOv-97-EH0" customClass="ReceiptVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReceiptVC_ID" id="DOv-97-EH0" customClass="ReceiptVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39h-e8-Kva">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3132,7 +3133,7 @@
                                                 <color key="textColor" red="0.0039215686269999999" green="0.66666666669999997" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-kT-Zxr" customClass="CosmosView" customModule="Cosmos">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ebf-kT-Zxr" customClass="CosmosView" customModule="Cosmos">
                                                 <rect key="frame" x="73" y="14" width="158" height="30"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -3230,7 +3231,7 @@
                                     <constraint firstItem="yqQ-R8-20x" firstAttribute="leading" secondItem="oHO-vg-w5c" secondAttribute="leading" constant="8" id="uWu-MX-hIX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7p-YW-lkT">
+                            <button opaque="NO" contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7p-YW-lkT">
                                 <rect key="frame" x="28" y="523" width="264" height="40"/>
                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -3245,6 +3246,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="gAt-cu-5do"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="oHO-vg-w5c" firstAttribute="trailing" secondItem="gAt-cu-5do" secondAttribute="trailing" id="20f-hQ-PNd"/>
@@ -3255,7 +3257,6 @@
                             <constraint firstItem="I7p-YW-lkT" firstAttribute="width" secondItem="39h-e8-Kva" secondAttribute="width" multiplier="0.825" id="l83-hX-d1a"/>
                             <constraint firstItem="I7p-YW-lkT" firstAttribute="centerX" secondItem="39h-e8-Kva" secondAttribute="centerX" id="unD-e9-E8T"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="gAt-cu-5do"/>
                     </view>
                     <navigationItem key="navigationItem" title="Job Receipt" id="asL-NG-kX1">
                         <barButtonItem key="backBarButtonItem" title=" " id="5Gl-kI-pcf"/>
@@ -3283,7 +3284,7 @@
         <!--Job in Progress-->
         <scene sceneID="5EA-BH-t5F">
             <objects>
-                <viewController storyboardIdentifier="ProviderOnTheWayVC_ID" id="Dxv-Jd-fDy" customClass="ProviderOnTheWayVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProviderOnTheWayVC_ID" id="Dxv-Jd-fDy" customClass="ProviderOnTheWayVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4CQ-yC-LUU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3442,6 +3443,7 @@
                                 </connections>
                             </mapView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="LcC-d6-Jv1"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vAX-7t-1gt" secondAttribute="trailing" id="5ul-yW-CqM"/>
@@ -3459,7 +3461,6 @@
                             <constraint firstItem="vC6-n3-rnB" firstAttribute="bottom" secondItem="LcC-d6-Jv1" secondAttribute="bottom" id="sc3-yW-fbx"/>
                             <constraint firstItem="JuY-1c-aQk" firstAttribute="leading" secondItem="LcC-d6-Jv1" secondAttribute="leading" id="xMM-AK-tyt"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="LcC-d6-Jv1"/>
                     </view>
                     <navigationItem key="navigationItem" title="Job in Progress" id="Iaz-YN-se5">
                         <barButtonItem key="backBarButtonItem" title=" " id="buk-LC-Dkd"/>
@@ -3482,7 +3483,7 @@
         <!--Change Password-->
         <scene sceneID="ujx-ys-VaH">
             <objects>
-                <viewController storyboardIdentifier="ChangePasswordVC_ID" id="ZJg-7g-qXp" customClass="ChangePasswordVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChangePasswordVC_ID" id="ZJg-7g-qXp" customClass="ChangePasswordVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o7g-65-3HL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3531,7 +3532,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xeV-t2-S1f">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="370"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-NM-Arv">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GR8-NM-Arv">
                                                 <rect key="frame" x="16" y="282" width="256" height="50"/>
                                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -3756,6 +3757,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="tqf-dE-q9m"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="tqf-dE-q9m" firstAttribute="bottom" secondItem="gDn-1m-1xU" secondAttribute="bottom" constant="126" id="1o3-Jt-5Hi"/>
@@ -3774,7 +3776,6 @@
                             <constraint firstItem="tqf-dE-q9m" firstAttribute="trailing" secondItem="gDn-1m-1xU" secondAttribute="trailing" constant="16" id="xOe-Q3-bSs"/>
                             <constraint firstItem="DVL-1z-fkU" firstAttribute="trailing" secondItem="tqf-dE-q9m" secondAttribute="trailing" id="zlT-QW-KMG"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="tqf-dE-q9m"/>
                     </view>
                     <navigationItem key="navigationItem" title="Change Password" id="bJO-eD-qZj">
                         <barButtonItem key="backBarButtonItem" title=" " id="4vA-hI-oDw"/>
@@ -3800,7 +3801,7 @@
         <!--Set Job Location-->
         <scene sceneID="Ibg-0G-4sy">
             <objects>
-                <viewController storyboardIdentifier="SetLocationVC_ID" id="mvc-CY-nkW" customClass="SetLocationVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SetLocationVC_ID" id="mvc-CY-nkW" customClass="SetLocationVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fLF-eH-Jv7">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3883,6 +3884,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="bZq-Ji-8pv"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="bZq-Ji-8pv" firstAttribute="trailing" secondItem="9x7-OL-2ye" secondAttribute="trailing" constant="16" id="1MN-pR-GKX"/>
@@ -3909,12 +3911,11 @@
                             <constraint firstItem="zqR-SZ-9D3" firstAttribute="leading" secondItem="bZq-Ji-8pv" secondAttribute="leading" id="xFp-z3-8w8"/>
                             <constraint firstItem="zqR-SZ-9D3" firstAttribute="top" secondItem="Pzh-JN-YyG" secondAttribute="bottom" id="zFC-4F-mlu"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="bZq-Ji-8pv"/>
                     </view>
                     <navigationItem key="navigationItem" title="Set Job Location" id="ebS-QD-4F7">
                         <barButtonItem key="backBarButtonItem" title=" " id="10P-hU-Kmi"/>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="rIa-ac-97E">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="fBq-Vq-kTD">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="fBq-Vq-kTD">
                                 <rect key="frame" x="258" y="0.0" width="46" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
@@ -3965,7 +3966,7 @@
         <!--Profile-->
         <scene sceneID="wAi-9i-Akj">
             <objects>
-                <tableViewController storyboardIdentifier="ProfileViewController" id="6y3-dj-zmZ" customClass="ProfileViewController" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ProfileViewController" id="6y3-dj-zmZ" customClass="ProfileViewController" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="j6y-KS-yzc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3991,7 +3992,7 @@
                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prq-ti-1v2" customClass="CosmosView" customModule="Cosmos">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Prq-ti-1v2" customClass="CosmosView" customModule="Cosmos">
                                             <rect key="frame" x="123" y="92" width="74" height="14"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <userDefinedRuntimeAttributes>
@@ -4052,7 +4053,7 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                             <constraints>
                                                 <constraint firstItem="LTn-AU-kgB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="mUm-b6-Auf" secondAttribute="leading" constant="10" id="D5p-WR-BLd"/>
                                                 <constraint firstItem="Wgb-zN-bVZ" firstAttribute="leading" secondItem="LTn-AU-kgB" secondAttribute="trailing" constant="50" id="P9L-uy-PBX"/>
@@ -4110,8 +4111,8 @@
                             </constraints>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileReviewHeaderCell" rowHeight="36" id="kYL-a9-OO0" customClass="ProfileReviewHeaderCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="268" width="320" height="36"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileReviewHeaderCell" rowHeight="36" id="kYL-a9-OO0" customClass="ProfileReviewHeaderCell" customModule="Topinup_Professionals" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="264.5" width="320" height="36"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kYL-a9-OO0" id="Mna-p1-5l8">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="36"/>
@@ -4149,8 +4150,8 @@
                                     <outlet property="reviews" destination="vMD-jr-eTi" id="7p4-6W-6Wl"/>
                                 </connections>
                             </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileReviewCell" rowHeight="100" id="iFE-H0-bjF" customClass="ProfileReviewCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="304" width="320" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProfileReviewCell" rowHeight="100" id="iFE-H0-bjF" customClass="ProfileReviewCell" customModule="Topinup_Professionals" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="300.5" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iFE-H0-bjF" id="crf-Td-gVp">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
@@ -4177,7 +4178,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-aU-02f" customClass="CosmosView" customModule="Cosmos">
+                                                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-aU-02f" customClass="CosmosView" customModule="Cosmos">
                                                     <rect key="frame" x="46" y="30" width="69" height="13"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <userDefinedRuntimeAttributes>
@@ -4212,7 +4213,7 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BZa-2u-YHQ">
                                                     <rect key="frame" x="0.0" y="98" width="320" height="1"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="Yc2-9A-pLB"/>
                                                     </constraints>
@@ -4281,7 +4282,7 @@
         <!--Report-->
         <scene sceneID="FXW-h5-o0R">
             <objects>
-                <viewController storyboardIdentifier="ReportVC_ID" id="oSG-Jz-Y2s" customClass="ReportVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReportVC_ID" id="oSG-Jz-Y2s" customClass="ReportVC" customModule="Topinup_Professionals" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8kE-Fr-WDy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -4401,7 +4402,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddImageCell" id="uo5-XE-w7l" customClass="AddImageCell" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="AddImageCell" id="uo5-XE-w7l" customClass="AddImageCell" customModule="Topinup_Professionals" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -4432,6 +4433,7 @@
                                 </cells>
                             </collectionView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="zi6-Pu-N9d"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DGq-2j-dvO" firstAttribute="leading" secondItem="zi6-Pu-N9d" secondAttribute="leading" constant="16" id="3Tm-Qs-eN3"/>
@@ -4461,7 +4463,6 @@
                             <constraint firstItem="uJk-Wg-4cv" firstAttribute="top" secondItem="jAP-a5-L73" secondAttribute="bottom" constant="5" id="ql0-nm-Nft"/>
                             <constraint firstItem="jAP-a5-L73" firstAttribute="leading" secondItem="DGq-2j-dvO" secondAttribute="trailing" constant="8" id="tZD-Ab-L8w"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="zi6-Pu-N9d"/>
                     </view>
                     <navigationItem key="navigationItem" title="Report" id="Odf-zy-PzB">
                         <barButtonItem key="backBarButtonItem" title=" " id="2Uh-z5-BJs"/>
@@ -4481,6 +4482,23 @@
             <point key="canvasLocation" x="6135" y="-230"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="B74-sA-i1U">
+            <size key="intrinsicContentSize" width="162" height="30"/>
+        </designable>
+        <designable name="Ebf-kT-Zxr">
+            <size key="intrinsicContentSize" width="158" height="30"/>
+        </designable>
+        <designable name="K3u-ex-L3T">
+            <size key="intrinsicContentSize" width="85" height="17"/>
+        </designable>
+        <designable name="NsL-aU-02f">
+            <size key="intrinsicContentSize" width="69" height="13"/>
+        </designable>
+        <designable name="Prq-ti-1v2">
+            <size key="intrinsicContentSize" width="74" height="14"/>
+        </designable>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="Zre-Kt-5AT"/>
         <segue reference="je0-Ae-BXX"/>
@@ -4514,5 +4532,14 @@
         <image name="play" width="50" height="50"/>
         <image name="receiptbg" width="977" height="1388"/>
         <image name="reset" width="111" height="120"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

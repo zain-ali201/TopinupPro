@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -21,7 +21,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverCell" rowHeight="115" id="NZS-bm-fTV" customClass="RecieverCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="115"/>
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NZS-bm-fTV" id="0fu-Z1-AXs">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
@@ -110,7 +110,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverAudioCell" rowHeight="100" id="fuh-2C-efM" customClass="RecieverAudioCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="143" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="139.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fuh-2C-efM" id="D2D-0f-LJ0">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -254,7 +254,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecieverMediaCell" rowHeight="234" id="18i-i4-Cvs" customClass="RecieverMediaCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="243" width="414" height="234"/>
+                                        <rect key="frame" x="0.0" y="239.5" width="414" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="18i-i4-Cvs" id="9pf-zH-tP2">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
@@ -379,8 +379,8 @@
                                             <outlet property="userImage" destination="w7h-eX-xOQ" id="9wG-hY-StN"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderCell" rowHeight="115" id="Gkn-Ar-RVu" customClass="SenderCell" customModule="Neighboorhood_iOS_Services">
-                                        <rect key="frame" x="0.0" y="477" width="414" height="115"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderCell" rowHeight="115" id="Gkn-Ar-RVu" customClass="SenderCell" customModule="Topinup_Professionals" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="473.5" width="414" height="115"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gkn-Ar-RVu" id="U2N-L1-4Dv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="115"/>
@@ -459,7 +459,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderAudioCell" rowHeight="100" id="zcf-CT-WzV" customClass="SenderAudioCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="592" width="414" height="100"/>
+                                        <rect key="frame" x="0.0" y="588.5" width="414" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zcf-CT-WzV" id="bxC-Wz-Mwt">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
@@ -590,7 +590,7 @@
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SenderMediaCell" rowHeight="234" id="Eby-hk-0ga" customClass="SenderMediaCell" customModule="Topinup_Professionals" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="692" width="414" height="234"/>
+                                        <rect key="frame" x="0.0" y="688.5" width="414" height="234"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Eby-hk-0ga" id="C71-NW-IK7">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="234"/>
