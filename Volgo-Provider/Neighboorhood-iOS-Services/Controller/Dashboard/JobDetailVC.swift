@@ -76,7 +76,7 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
             
             if tabBarBtn.rawValue == TabBarButtonActive.jobs.rawValue {
                 self.btnQuote.setTitle("Cancel", for: .normal)
-                self.btnOK.setTitle("Acept", for: .normal)
+                self.btnOK.setTitle("Accept", for: .normal)
                 self.btnAccept.isHidden = true
                 self.btnQuote.isHidden = true
                 self.btnOK.isHidden = false

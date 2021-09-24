@@ -18,37 +18,29 @@ class ReceiptVC: UIViewController {
     @IBOutlet weak var lblTotalAmount: UILabel!
     @IBOutlet weak var btnBackToHome: UIButton!
     
-    
     @IBOutlet weak var viewBackgroundTimer: UIView!
     @IBOutlet weak var lblTotalTime: UILabel!
     //@IBOutlet weak var heightConstraintTotalTime: NSLayoutConstraint!
 //    @IBOutlet weak var heightConstraintReceiptView: NSLayoutConstraint!
-    
-    
     @IBOutlet weak var ratingView: CosmosView!
     @IBOutlet weak var commentFld: UITextField!
-    
     @IBOutlet var remarksTV: UITextView!
     @IBOutlet var _jobType: UILabel!
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var imgPerson: UIImageView!
-    
     
     var jobDetail : JobHistoryVO!
     var jobType : JobType!
     var totalTime = String()
     var rating : Double = 0.0
     var jobID = String()
+    var totalAmount = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.btnBackToHome.layer.cornerRadius = self.btnBackToHome.frame.height/2
         ratingView.didFinishTouchingCosmos =  didReceiveRating
-        
-        
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,7 +53,6 @@ class ReceiptVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
     
     func viewSettingAboutJobType() {
         
@@ -83,7 +74,6 @@ class ReceiptVC: UIViewController {
     
     func viewInitializer()
     {
-        
         self.remarksTV.layer.cornerRadius = 5.0
         self.remarksTV.layer.borderWidth = 1.0
         self.remarksTV.layer.borderColor = UIColor.lightGray.cgColor
@@ -98,8 +88,6 @@ class ReceiptVC: UIViewController {
             self.imgPerson.kf.setImage(with: url, placeholder: UIImage(named: "imagePlaceholder"), options: nil, progressBlock: nil) { (image, error, cacheTyle, uurl) in
                 //                    self.userBtn.setImage(image, for: .normal)
             }
-            
-            
         }
         
         self.lblName.text = self.jobDetail.displayName
@@ -111,7 +99,7 @@ class ReceiptVC: UIViewController {
         
         if jobType.rawValue == JobType.hourly.rawValue
         {
-            self.lblTotalAmount.text = (self.jobDetail.currency) + String(describing: self.jobDetail.budget!)
+            self.lblTotalAmount.text = (self.jobDetail.currency) + String(format: "%.2f", totalAmount)
         }
         else if jobType.rawValue == JobType.fixed.rawValue
         {
@@ -167,5 +155,4 @@ class ReceiptVC: UIViewController {
             self.callApiForFeedback()
         }
     }
-
 }

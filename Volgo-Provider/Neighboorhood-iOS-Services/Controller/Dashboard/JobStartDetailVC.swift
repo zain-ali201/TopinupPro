@@ -47,6 +47,9 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     @IBOutlet weak var btnContact: UIButton!
     @IBOutlet weak var lblHourlyFixed: UILabel!
     
+    @IBOutlet weak var lblTotal: UILabel!
+    @IBOutlet weak var lblRateType: UILabel!
+    
     @IBOutlet weak var viewBackgroundMapView: UIView!
     
     @IBOutlet weak var imgMapMarker: UIImageView!
@@ -83,6 +86,7 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     var timer = Timer()
     var count = 0
     var totalTime = String()
+    var totalAmount = 0.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -209,11 +213,7 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
                     return
                 }
             }
-            
-
         }
-        
-        
         
         // handling code
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -229,16 +229,24 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         self.latitude = self.jobDetail.latitude
         self.longitude = self.jobDetail.longitude
         
+        totalAmount = Double(self.jobDetail.budget ?? "0.0")!
+        
         if self.jobDetail.type == JobType.hourly.rawValue
         {
             self.lblRate.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!) + "/hr"
+            self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
             self.lblHourlyFixed.text = "Job Rate"
+            self.lblRateType.text = "Total"
+            self.lblRate.isHidden = false
+            self.lblHourlyFixed.isHidden = false
             jobType = JobType(rawValue: JobType.hourly.rawValue)
         }
         else if self.jobDetail.type == JobType.fixed.rawValue
         {
-            self.lblRate.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
-            self.lblHourlyFixed.text = "Fixed Job Rate"
+            self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
+            self.lblRateType.text = "Fixed Job Rate"
+            self.lblRate.isHidden = true
+            self.lblHourlyFixed.isHidden = true
             jobType = JobType(rawValue: JobType.fixed.rawValue)
         }
         
@@ -261,8 +269,6 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         
         self.imgClient.layer.cornerRadius = self.imgClient.frame.height/2
         
-        
-        
         var newStr = self.jobDetail.profileImageURL!
         var imageUrl = ""
         if(!newStr.isEmpty){
@@ -278,9 +284,6 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
                 
             }
         }
-        
-        
-        
         
        /* if(!imageURl.isEmpty){
             
@@ -537,8 +540,21 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
     func formattedTime(totalSeconds: Int) -> String {
         let seconds = totalSeconds % 60
         let minutes = (totalSeconds / 60) % 60
-        let hours = totalSeconds / 3600;
-        return String(format: "%02d:%02d:%02d", hours,minutes,seconds)
+        let hours:Double = Double(totalSeconds) / 3600
+        print(minutes)
+        if self.jobDetail.type == JobType.hourly.rawValue
+        {
+            let budget = Double(jobDetail.budget ?? "0.0")!
+            
+            if hours >= 1
+            {
+                totalAmount += budget * Double(hours)
+                print(totalAmount)
+                self.lblTotal.text = (self.jobDetail.currency)+" "+String(format: "%.2f", totalAmount)
+            }
+        }
+        
+        return String(format: "%02d:%02d:%02d", Int(hours), minutes, seconds)
     }
     
     func saveJobTime(){
@@ -746,8 +762,10 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         
         if let controller = segue.destination as? ReceiptVC
         {
+            timer.invalidate()
             controller.jobType = jobType
             controller.totalTime = self.totalTime
+            controller.totalAmount = self.totalAmount
             controller.jobDetail = self.jobDetail
         }
         else if let controller = segue.destination as? ProviderOnTheWayVC
