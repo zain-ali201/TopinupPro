@@ -123,11 +123,11 @@ class ChatDetailViewController: UIViewController {
         //setupUserButton()
     }
     
-    func setupScreenTitle() {
+    func setupScreenTitle()
+    {
         // UIScreen.main.bounds.width
         let customView = UIView()
         customView.frame = CGRect.init(x: 0, y: 0, width: 150, height: 44.0)
-        
         
         let userButton = UIButton()
         userButton.frame = CGRect.init(x: 0, y: 5, width: 34, height: 34)
@@ -166,13 +166,10 @@ class ChatDetailViewController: UIViewController {
         customView.addSubview(label)
         
         
-        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewProfile(_:)))
-        customView.addGestureRecognizer(tap)
-        
+//        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewProfile(_:)))
+//        customView.addGestureRecognizer(tap)
         
         self.navigationItem.titleView = customView
-        
-        
     }
     /*
     func setupUserButton() {
@@ -192,10 +189,8 @@ class ChatDetailViewController: UIViewController {
     }
     */
     
-    @objc func viewProfile(_ sender: UITapGestureRecognizer? = nil) {
-        
-        
-        
+    @objc func viewProfile(_ sender: UITapGestureRecognizer? = nil)
+    {
         if let vcs = self.navigationController?.viewControllers {
             
             for previousVC in vcs {

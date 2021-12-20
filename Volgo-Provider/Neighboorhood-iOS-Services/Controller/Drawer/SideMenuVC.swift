@@ -63,15 +63,13 @@ class SideMenuVC: UITableViewController {
     func fillMenuItems() {
         
         menuItems = [MenuItem]()
-        menuItems.append(MenuItem(title: "New Jobs", icon: "home", storyboardId: "Dashboard_ID"))
+        menuItems.append(MenuItem(title: "Dashboard", icon: "home", storyboardId: "Dashboard_ID"))
         menuItems.append(MenuItem(title: "Messages", icon: "messages", storyboardId: "MessageList_ID"))
-        menuItems.append(MenuItem(title: "Job History", icon: "myjobs", storyboardId: "MyJobs_ID"))
+//        menuItems.append(MenuItem(title: "Job History", icon: "myjobs", storyboardId: "MyJobs_ID"))
         //menuItems.append(MenuItem(title: "Payments", icon: "payments", storyboardId: ""))
-        
-        menuItems.append(MenuItem(title: "Help Desk", icon: "help", storyboardId: ""))
-        menuItems.append(MenuItem(title: "Invite Friends", icon: "invite", storyboardId: ""))
-        menuItems.append(MenuItem(title: "Settings", icon: "Settings", storyboardId: "Profile_ID"))
-        
+        menuItems.append(MenuItem(title: "Support", icon: "help", storyboardId: ""))
+//        menuItems.append(MenuItem(title: "Invite Friends", icon: "invite", storyboardId: ""))
+        menuItems.append(MenuItem(title: "Profile", icon: "Settings", storyboardId: "Profile_ID"))
         menuItems.append(MenuItem(title: "Logout", icon: "logout", storyboardId: ""))
     }
     
@@ -210,34 +208,34 @@ class SideMenuVC: UITableViewController {
                 self.dismiss(animated: true) {
                     NotificationCenter.default.post(name: .gotoMessagesNotification, object: nil)
                 }
-            case 2:
-                
-                self.dismiss(animated: true) {
-                    NotificationCenter.default.post(name: .gotoMyJobsNotification, object: nil)
-                }
+//            case 2:
+//
+//                self.dismiss(animated: true) {
+//                    NotificationCenter.default.post(name: .gotoMyJobsNotification, object: nil)
+//                }
 //            case 3:
 //
 //                self.dismiss(animated: true) {
 //                    NotificationCenter.default.post(name: .gotoPaymentNotification, object: nil)
 //                }
             
-            case 3:
+            case 2:
                 self.dismiss(animated: true) {
                         self.helpDesk.show()
                     }
-            case 4:
-                showProgressHud(viewController: self)
-                let shareText = "Download Volgo App: https://www.volgopoint.com/"
-                let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
-                present(vc, animated: true)
-                hideProgressHud(viewController: self)
+//            case 4:
+//                showProgressHud(viewController: self)
+//                let shareText = "Download Topinup App: https://www.topinup.com"
+//                let vc = UIActivityViewController(activityItems: [shareText], applicationActivities: [])
+//                present(vc, animated: true)
+//                hideProgressHud(viewController: self)
                 
-            case 5:
+            case 3:
                 
                 self.dismiss(animated: true) {
                     NotificationCenter.default.post(name: .gotoProfileNotification, object: nil)
                 }
-            case 6:
+            case 4:
                 let alertController = UIAlertController(title: "Confirmation Required", message: "Are you sure you want to logout?", preferredStyle: .alert)
                 
                 let confirmAction = UIAlertAction(title: "Yes, Logout", style: .destructive, handler: { (action:UIAlertAction) in

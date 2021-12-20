@@ -90,11 +90,6 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
             else if tabBarBtn.rawValue == TabBarButtonActive.accepted.rawValue {
                 self.btnQuote.setTitle("Cancel", for: .normal)
             }
-            
-            
-            
-            
-            
             self.btnQuote.layer.cornerRadius = self.btnQuote.frame.height/2
             self.btnAccept.layer.cornerRadius = self.btnAccept.frame.height/2
             self.btnOK.layer.cornerRadius = self.btnOK.frame.height/2
@@ -163,8 +158,19 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         let _ = self.navigationController?.popViewController(animated: true)
     }
     
-    @IBAction func btnOKAction(_ sender: Any) {
-        
+    @IBAction func chatBtnAction(_ sender: Any)
+    {
+        let storyBoard = UIStoryboard(name: "Chat", bundle: nil)
+        let vc = storyBoard.instantiateViewController(withIdentifier: "ChatDetailViewController") as! ChatDetailViewController
+        vc.jobID          = jobID
+        vc.clientID       = jobDetail.clientID
+        vc.clientName     = jobDetail.displayName
+        vc.clientImageURL = jobDetail.profileImageURL
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    @IBAction func btnOKAction(_ sender: Any)
+    {
         if(isFromHistory){
             let _ = self.navigationController?.popViewController(animated: true)
         }else{
@@ -172,10 +178,7 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
                 btnAcceptAction(self.btnAccept)
             }
         }
-        
-        
     }
-    
     
     func callApijobDetail() {
         if !Connection.isInternetAvailable()
@@ -264,10 +267,8 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         self.categoryName.text = self.jobDetail.categoryName
         self.jobType.text = self.jobDetail.type.capitalizingFirstLetter()
         
-        
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
-        
         
         if self.jobDetail.type == "hourly"
         {
@@ -279,7 +280,6 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         }
         else
         {
-            
              let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
             
             //imageBudget.image = UIImage(named: "coin")
@@ -287,9 +287,6 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
             self.jobType.text = "Fixed Budget"
             //self.heightConstraintsImage.constant = 18
         }
-        
-        
-        
 //        let data = setImageWithUrl(url: self.jobDetail.categoryImageURL!)
 //        DispatchQueue.main.async {
 //            self.imgClient.layer.cornerRadius = self.imgClient.frame.height/2

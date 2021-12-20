@@ -74,6 +74,8 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     var selectedDate = Date()
     let notificationButton = SSBadgeButton()
     
+    let statusLabel = UILabel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -82,10 +84,6 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         self.viewBackgroundTabBar = addViewShadow(view : self.viewBackgroundTabBar)
         self.tableView.register(UINib(nibName: "JobList", bundle: nil), forCellReuseIdentifier: "cell")
         
-//        print("Token: \(String(describing: user?.token))")
-//        FSCalendar.scope = .week
-//        FSCalendar.select(Date())
-        
         tabBarBtn = TabBarButtonActive(rawValue: TabBarButtonActive.jobs.rawValue)
         SocketManager.shared.establishConnection()
         
@@ -93,16 +91,11 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         self.setupSideMenu()
         setupRightBarButtonItem()
         
-        
         self.addObservers()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-        
-        
-        
         
         if AppDelegate.isFromNotification
         {
@@ -120,11 +113,7 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         
         self.locationViewInitializer()
         //self.getUserLocation()
-        
-        
-        
         //SocketManager.shared.sendSocketRequest(name: SocketEvent.Is_Driver_Active, params: ["":""])
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -144,19 +133,8 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         self.handymanNearbyCallingApi(date: startOfDay)
     }
     
-    func setupRightBarButtonItem() {
-//        let statusLabel = UILabel()
-//        statusLabel.font = UIFont.boldSystemFont(ofSize: 16)
-//        statusLabel.textColor = UIColor.white
-//
-//        statusLabel.text = "Offline"
-        
-        
-        
-        
-        
-       
-        
+    func setupRightBarButtonItem()
+    {
         let toggle = UISwitch()
         toggle.addTarget(self, action: #selector(toggleValueChanged(_:)), for: .valueChanged)
         toggle.onTintColor = UIColor.green
@@ -164,66 +142,49 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         toggle.thumbTintColor = UIColor.white
         toggle.backgroundColor = UIColor.red
         toggle.layer.cornerRadius = 16
+    
+        statusLabel.font = UIFont.boldSystemFont(ofSize: 16)
+        statusLabel.textColor = UIColor.white
         
-        
-        if let user = AppUser.getUser() {
-            
-            self.title = (user.status == true) ? "Online": "Offline";
+        if let user = AppUser.getUser()
+        {
+            statusLabel.text = (user.status == true) ? "Online": "Offline";
             toggle.setOn(user.status!, animated: false)
-            
         }
-        
-        
-        
         
         notificationButton.frame = CGRect(x: 0, y: 0, width: 44, height: 44)
         notificationButton.setImage(UIImage(named: "chatWhite"), for: .normal)
         notificationButton.addTarget(self, action: #selector(self.gotoMessages), for: .touchUpInside)
         notificationButton.badgeEdgeInsets = UIEdgeInsets(top: 10, left: 0, bottom: 0, right: 0)
-
         
 //        let unreadCount: Int = UserDefaults.standard.integer(forKey: DashboardVC.KEY_UNREAD_MESSAGES)
-//        
-//        
 //        notificationButton.badge = "\(unreadCount)"
         
-        
-        
-        let stackView = UIStackView(arrangedSubviews: [toggle, notificationButton])
+        let stackView = UIStackView(arrangedSubviews: [toggle, statusLabel, notificationButton])
         stackView.spacing = 15
-        
-       
-        
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: stackView)
     }
     
-    @objc func toggleValueChanged(_ toggle: UISwitch) {
-        
-        
-        self.title = (toggle.isOn) ? "Online": "Offline";
+    @objc func toggleValueChanged(_ toggle: UISwitch)
+    {
+        statusLabel.text = (toggle.isOn) ? "Online": "Offline";
         
         if let user = AppUser.getUser() {
             
             updateUserStaus(id: user._id!)
         }
-        
     }
     
-   
-    
-    @objc func gotoMessages(){
+    @objc func gotoMessages()
+    {
         NotificationCenter.default.post(name: .gotoMessagesNotification, object: nil)
     }
     
     @objc func didReceiveUnreadMessageResponse(notification : Notification)
     {
-        
         if let userInfo = notification.userInfo as NSDictionary?
         {
-            
             let unreadCount: Int = userInfo["count"] as! Int
-            
-            
             UserDefaults.standard.set(unreadCount , forKey: DashboardVC.KEY_UNREAD_MESSAGES)
             UserDefaults.standard.synchronize()
             UIApplication.shared.applicationIconBadgeNumber = UserDefaults.standard.integer(forKey: DashboardVC.KEY_UNREAD_MESSAGES)
@@ -231,14 +192,11 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
             if(unreadCount != 0){
                 self.notificationButton.badge =  "\(unreadCount)"
             }
-            
         }
     }
     
     func getUserLocation()
     {
-        
-        
         if let lastSavedLocation = DashboardVC.lastSavedLocation
         {
             
@@ -246,9 +204,7 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
     }
     
     func sendLocationToServer()
-    {
-        
-        
+    {   
         if let lastSavedLocation = DashboardVC.lastSavedLocation
         {
             print("lat: \(lastSavedLocation.coordinate.latitude.roundedStringValue())")
@@ -488,8 +444,6 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         
         var currentIndex : ProviderJobRequestVO!
         
-        
-        
         if tabBarBtn.rawValue == TabBarButtonActive.jobs.rawValue
         {
             currentIndex = self.jobsObject[indexPath.row]
@@ -509,10 +463,6 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         
         if currentIndex != nil
         {
-            
-            
-            
-            
             cell.lblName.text = currentIndex.displayName + " (\(currentIndex.categoryName))"
             cell.selectionStyle = .none
             cell.imgClient.layer.cornerRadius = cell.imgClient.frame.height/2
@@ -545,24 +495,11 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
                     
                 }
             }
-            
-            
-            
-            
-            
-            
         }
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        
-
-        
-        
-        
         if tabBarBtn.rawValue == TabBarButtonActive.jobs.rawValue {
             if self.jobAcceptedObject.count != 0 && self.jobDate != nil{
                 let startedJobDate = DateUtil.getsimpleDate(self.jobDate.dateFromISO8601!)
@@ -725,17 +662,14 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
         self.getUnreadMessageCount()
     }
     
-    func getUnreadMessageCount(){
-        
-        
-        
+    func getUnreadMessageCount()
+    {
         let params = ["userId": user?._id ?? ""] as [String : Any]
         SocketManager.shared.sendSocketRequest(name: SocketEvent.getUnreadMsgs, params: params)
-        
     }
     
-    func updateUserStaus(id : String){
-        
+    func updateUserStaus(id : String)
+    {
         let urlString = URLConfiguration.providerUserStatusURL + id
         self.params = nil
         Alamofire.request(urlString, method: .post,parameters: params, encoding: URLEncoding.httpBody, headers: URLConfiguration.headers())
@@ -748,20 +682,9 @@ class DashboardVC: BaseViewController, UITableViewDelegate, UITableViewDataSourc
                     
                     user.status = (user.status == true) ? false: true;
                     AppUser.setUser(user: user)
-                    
                 }
-                
-                
-                
                 let startOfDay = Calendar.current.startOfDay(for: self.selectedDate).iso8601
                 self.handymanNearbyCallingApi(date: startOfDay)
-                
-               
         }
-        
     }
-    
-    
-    
-
 }

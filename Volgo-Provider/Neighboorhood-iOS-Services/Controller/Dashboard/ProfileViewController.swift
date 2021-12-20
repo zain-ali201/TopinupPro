@@ -177,11 +177,6 @@ class ProfileViewController: UITableViewController {
 //        if UIApplication.shared.canOpenURL(mailURL) {
 //            UIApplication.shared.open(mailURL, options: [:], completionHandler: nil)
 //         }
-        
-        
-        
-        
-        
         let url = NSURL(string: "mailto:volgo@mail.com")
         UIApplication.shared.openURL(url as! URL)
         
@@ -192,14 +187,10 @@ class ProfileViewController: UITableViewController {
 //            UIApplication.shared.openURL(url)
 //          }
 //        }
-        
     }
     
-    
-    
-    @IBAction func sendMessages(_ sender: Any) {
-        
-        
+    @IBAction func sendMessages(_ sender: Any)
+    {
         if let vcs = self.navigationController?.viewControllers {
             
             for previousVC in vcs {
@@ -208,8 +199,6 @@ class ProfileViewController: UITableViewController {
                     return
                 }
             }
-            
-
         }
         
         print(jobID)
@@ -222,9 +211,6 @@ class ProfileViewController: UITableViewController {
         //vc.providerCategory = self.userCategory.text
         vc.clientImageURL = self.userProfileImageURL
         self.navigationController?.pushViewController(vc, animated: true)
-        
-
-        
         
 //        let sms: String = "sms:\(self.userPhone!)&body=Dear, \(self.userName.text!)"
 //        let strURL: String = sms.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!

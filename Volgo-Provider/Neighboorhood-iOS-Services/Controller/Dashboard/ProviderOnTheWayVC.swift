@@ -170,7 +170,7 @@ class ProviderOnTheWayVC: UIViewController,  MKMapViewDelegate, CLLocationManage
             if phone != ""
             {
                 let number = URL(string: "tel://" + phone)
-                let alertController = UIAlertController(title: "Alert", message: "Are you Sure want to Call? Call Charges will be applied", preferredStyle: .alert)
+                let alertController = UIAlertController(title: "Alert", message: "Are you sure you want to call? Call charges will be applied", preferredStyle: .alert)
                 
                 let defaultAction = UIAlertAction(title: "Yes", style: .default) { (action) in
                     UIApplication.shared.openURL(number!)

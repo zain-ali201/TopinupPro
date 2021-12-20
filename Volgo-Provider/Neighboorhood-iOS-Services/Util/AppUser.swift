@@ -62,7 +62,8 @@ class AppUser : NSObject {
     
     
     //MARK: - Device Token
-    internal static func setToken(token:String) {
+    internal static func setToken(token:String)
+    {
         UserDefaults.standard.set(token, forKey: KEY_DEVICE_TOKEN);
         UserDefaults.standard.synchronize()
         UserApi().updateFirebaseToken(params: ["deviceToken": token, "deviceType":"ios", "role":"provider"]) { (success, message) in

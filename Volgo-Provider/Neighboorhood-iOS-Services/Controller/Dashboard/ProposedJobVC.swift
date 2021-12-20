@@ -138,7 +138,6 @@ class ProposedJobVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
         vc.msgThreadID = messageList[indexPath.row]._id
         
         self.navigationController?.pushViewController(vc, animated: true)
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

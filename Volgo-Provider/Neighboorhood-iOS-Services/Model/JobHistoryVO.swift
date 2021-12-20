@@ -29,13 +29,11 @@ class JobHistoryVO : NSObject {
     var providerID : String!
     var displayName : String!
     var profileImageURL : String!
-    
     var categoryName : String!
     var categoryDescription : String!
     var categoryID : String!
     var categoryImageURL : String!
     var currency : String = ""
-    
     var clientPhone : String?
     
     var coordinaate : CLLocationCoordinate2D? {

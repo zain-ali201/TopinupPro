@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -13,7 +14,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpdeskVC" customModule="Neighboorhood_iOS_Services" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HelpdeskVC" customModule="Topinup_Professionals" customModuleProvider="target">
             <connections>
                 <outlet property="pupView" destination="bYr-NA-zC3" id="Ajm-VZ-rPm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="eaU-V5-VJo"/>
@@ -43,23 +44,11 @@
                                 <constraint firstAttribute="height" constant="40" id="ozn-Ni-3LB"/>
                             </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="textColor" systemColor="systemGrayColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YrJ-3s-fgb">
-                            <rect key="frame" x="40" y="125" width="60" height="60"/>
-                            <accessibility key="accessibilityConfiguration" label="Phone"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="60" id="8gx-Zy-tAG"/>
-                                <constraint firstAttribute="height" constant="60" id="Ghy-YY-Uau"/>
-                            </constraints>
-                            <state key="normal" image="call-1"/>
-                            <connections>
-                                <action selector="dialPhone:" destination="-1" eventType="touchUpInside" id="DAk-cs-ino"/>
-                            </connections>
-                        </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdO-ZD-zik">
-                            <rect key="frame" x="205" y="125" width="60" height="60"/>
+                            <rect key="frame" x="122.5" y="125" width="60" height="60"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="Tw2-Fg-XPM"/>
                                 <constraint firstAttribute="width" constant="60" id="vxE-TH-YEB"/>
@@ -90,31 +79,28 @@
                         <constraint firstItem="55T-WZ-plb" firstAttribute="width" secondItem="bYr-NA-zC3" secondAttribute="width" id="4Vi-EG-o0U"/>
                         <constraint firstAttribute="width" constant="305" id="B7n-dm-F9P"/>
                         <constraint firstItem="IMf-gI-tuQ" firstAttribute="width" secondItem="bYr-NA-zC3" secondAttribute="width" id="IYr-7g-hM3"/>
-                        <constraint firstItem="DWh-1f-zcZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="YrJ-3s-fgb" secondAttribute="bottom" constant="25" id="JMf-wx-Ktm"/>
                         <constraint firstItem="55T-WZ-plb" firstAttribute="top" secondItem="IMf-gI-tuQ" secondAttribute="bottom" id="JWO-gp-jBl"/>
-                        <constraint firstItem="YrJ-3s-fgb" firstAttribute="top" secondItem="55T-WZ-plb" secondAttribute="bottom" constant="25" id="KJK-mO-8Se"/>
-                        <constraint firstItem="YrJ-3s-fgb" firstAttribute="leading" secondItem="bYr-NA-zC3" secondAttribute="leading" constant="40" id="LzJ-6g-dVR"/>
                         <constraint firstAttribute="trailing" secondItem="DWh-1f-zcZ" secondAttribute="trailing" constant="8" id="Nep-d2-sNc"/>
                         <constraint firstItem="IMf-gI-tuQ" firstAttribute="leading" secondItem="bYr-NA-zC3" secondAttribute="leading" id="Nho-2x-3GL"/>
                         <constraint firstItem="DWh-1f-zcZ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="wdO-ZD-zik" secondAttribute="bottom" constant="25" id="O51-It-FaW"/>
                         <constraint firstItem="DWh-1f-zcZ" firstAttribute="leading" secondItem="bYr-NA-zC3" secondAttribute="leading" constant="8" id="ORg-Ra-eHP"/>
                         <constraint firstAttribute="height" constant="267" id="PAs-Ht-fNh"/>
+                        <constraint firstItem="wdO-ZD-zik" firstAttribute="centerX" secondItem="bYr-NA-zC3" secondAttribute="centerX" id="QWw-IW-ZN3"/>
                         <constraint firstItem="IMf-gI-tuQ" firstAttribute="top" secondItem="bYr-NA-zC3" secondAttribute="top" id="aAa-Ze-9PC"/>
                         <constraint firstItem="wdO-ZD-zik" firstAttribute="top" secondItem="55T-WZ-plb" secondAttribute="bottom" constant="25" id="hFf-oe-MnX"/>
                         <constraint firstAttribute="trailing" secondItem="55T-WZ-plb" secondAttribute="trailing" id="lOC-gY-VQZ"/>
-                        <constraint firstAttribute="trailing" secondItem="wdO-ZD-zik" secondAttribute="trailing" constant="40" id="ns0-hS-7yy"/>
                         <constraint firstAttribute="trailing" secondItem="IMf-gI-tuQ" secondAttribute="trailing" id="sYb-5S-zJT"/>
                         <constraint firstItem="55T-WZ-plb" firstAttribute="leading" secondItem="bYr-NA-zC3" secondAttribute="leading" id="u5y-MR-C2m"/>
                     </constraints>
                 </view>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="bYr-NA-zC3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.8" id="HoW-n8-3jq"/>
                 <constraint firstItem="bYr-NA-zC3" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="YJg-Se-XSY"/>
                 <constraint firstItem="bYr-NA-zC3" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="eFD-Kk-jHd"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="HoW-n8-3jq"/>
@@ -130,7 +116,9 @@
     </objects>
     <resources>
         <image name="blueButton" width="703" height="114"/>
-        <image name="call-1" width="109" height="109"/>
         <image name="mail" width="128" height="128"/>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
     </resources>
 </document>

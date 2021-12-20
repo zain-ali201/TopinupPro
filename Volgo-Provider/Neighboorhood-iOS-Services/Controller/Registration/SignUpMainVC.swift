@@ -362,11 +362,7 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
                 {
                     print(user!)
                     AppUser.setUser(user: user!)
-                    
                     self.callApiForDocuments(providerId: (user?._id)!)
-                    
-                    
-                    
                 }
                 else
                 {
@@ -502,6 +498,9 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         let countryCode = countryCodeButton.currentTitle?.trimmed()
        // let validatePhone = validatePhoneNumber(value: phone!)
         
+        let PHONE_REGEX = "^\\d{10}$"
+        var phoneTest = NSPredicate(format: "SELF MATCHES %@", PHONE_REGEX)
+        
         if (firstName?.length())! < 1
         {
             result = "Please enter your first name"
@@ -540,15 +539,22 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         else if (phone?.length())! < 3 {
             result = "Please enter a phone number"
             return result
-        }else if profileImageArray.isEmpty
+        }
+        else if !phoneTest.evaluate(with: phone)
         {
-            result = "Please choose profile picture"
-            return result
-        }else if selectedImagesArray.isEmpty
-        {
-            result = "Please choose documents"
+            result = "Please enter a valid phone number"
             return result
         }
+//        else if profileImageArray.isEmpty
+//        {
+//            result = "Please choose profile picture"
+//            return result
+//        }
+//        else if selectedImagesArray.isEmpty
+//        {
+//            result = "Please choose documents"
+//            return result
+//        }
 //        else if (companyCode?.length())! < 1 {
 //            result = "Please enter the company code"
 //            return result
