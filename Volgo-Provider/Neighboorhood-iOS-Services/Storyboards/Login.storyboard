@@ -705,6 +705,32 @@
                                                     <constraint firstAttribute="bottom" secondItem="bI5-ub-UQl" secondAttribute="bottom" id="e9I-cK-csY"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fc9-ub-BXc">
+                                                <rect key="frame" x="16" y="614" width="288" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City, Country" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-iP-bdJ">
+                                                        <rect key="frame" x="10" y="0.0" width="268" height="50"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="16"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                                                <color key="value" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="nI7-V6-j8t" id="2Pv-gD-PE2"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.83921568629999999" green="0.96470588239999999" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="LL4-iP-bdJ" secondAttribute="trailing" constant="10" id="5dW-e4-rzM"/>
+                                                    <constraint firstAttribute="bottom" secondItem="LL4-iP-bdJ" secondAttribute="bottom" id="LPW-UV-bZ6"/>
+                                                    <constraint firstAttribute="height" constant="50" id="X6E-jw-kD6"/>
+                                                    <constraint firstItem="LL4-iP-bdJ" firstAttribute="leading" secondItem="fc9-ub-BXc" secondAttribute="leading" constant="10" id="q05-KQ-68g"/>
+                                                    <constraint firstItem="LL4-iP-bdJ" firstAttribute="top" secondItem="fc9-ub-BXc" secondAttribute="top" id="sEL-By-M5e"/>
+                                                </constraints>
+                                            </view>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Documents" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aP1-HZ-Gqb">
                                                 <rect key="frame" x="16" y="611" width="288" height="16.5"/>
                                                 <constraints>
@@ -760,7 +786,7 @@
                                                 </connections>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AO4-eR-Djr">
-                                                <rect key="frame" x="16" y="614" width="288" height="50"/>
+                                                <rect key="frame" x="16" y="679" width="288" height="50"/>
                                                 <color key="backgroundColor" red="0.0078431372550000003" green="0.76862745099999996" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="d0J-nz-dcz"/>
@@ -774,7 +800,7 @@
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D0s-kA-U2b">
-                                                <rect key="frame" x="19" y="676" width="282" height="30"/>
+                                                <rect key="frame" x="19" y="741" width="282" height="30"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YEO-AK-BVf">
                                                         <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
@@ -869,12 +895,14 @@
                                             <constraint firstItem="uXi-Mu-1LB" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="CsS-Jy-Pb4"/>
                                             <constraint firstItem="AO4-eR-Djr" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="Epq-0Z-7ZY"/>
                                             <constraint firstItem="p3k-21-4kV" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="G6b-Ta-tmx"/>
+                                            <constraint firstItem="fc9-ub-BXc" firstAttribute="top" secondItem="aHv-1b-jD2" secondAttribute="bottom" constant="15" id="H9f-T6-BfV"/>
                                             <constraint firstAttribute="trailing" secondItem="aHv-1b-jD2" secondAttribute="trailing" constant="16" id="Hq3-jW-pGI"/>
                                             <constraint firstItem="lIL-iR-kSG" firstAttribute="centerX" secondItem="ZVI-pr-WuJ" secondAttribute="centerX" id="JUD-XS-YVW"/>
                                             <constraint firstItem="aP1-HZ-Gqb" firstAttribute="top" secondItem="aHv-1b-jD2" secondAttribute="bottom" constant="12" id="Jlh-49-kMp"/>
                                             <constraint firstItem="aYQ-k4-NaY" firstAttribute="top" secondItem="dKA-eC-X2X" secondAttribute="bottom" constant="12" id="L0g-B1-Jlf"/>
                                             <constraint firstAttribute="trailing" secondItem="aP1-HZ-Gqb" secondAttribute="trailing" constant="16" id="Pnv-LG-nbZ"/>
                                             <constraint firstAttribute="trailing" secondItem="aYQ-k4-NaY" secondAttribute="trailing" constant="16" id="R0V-fO-Dst"/>
+                                            <constraint firstItem="fc9-ub-BXc" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="RHg-1J-EQX"/>
                                             <constraint firstItem="lIL-iR-kSG" firstAttribute="top" secondItem="ZVI-pr-WuJ" secondAttribute="top" constant="38" id="TcM-kc-O9T"/>
                                             <constraint firstItem="D0s-kA-U2b" firstAttribute="top" secondItem="AO4-eR-Djr" secondAttribute="bottom" constant="12" id="WH3-iK-fXN"/>
                                             <constraint firstItem="uXi-Mu-1LB" firstAttribute="top" secondItem="fkn-dV-JFD" secondAttribute="bottom" constant="12" id="XDz-CZ-Ruh"/>
@@ -890,7 +918,8 @@
                                             <constraint firstAttribute="trailing" secondItem="dKA-eC-X2X" secondAttribute="trailing" constant="16" id="oZ3-Sc-vCv"/>
                                             <constraint firstAttribute="height" constant="900" id="oiZ-c7-QgT"/>
                                             <constraint firstItem="aHv-1b-jD2" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="p1j-ld-y6O"/>
-                                            <constraint firstItem="AO4-eR-Djr" firstAttribute="top" secondItem="aHv-1b-jD2" secondAttribute="bottom" constant="15" id="qdd-vD-IMH"/>
+                                            <constraint firstItem="AO4-eR-Djr" firstAttribute="top" secondItem="fc9-ub-BXc" secondAttribute="bottom" constant="15" id="pmW-nz-8uw"/>
+                                            <constraint firstAttribute="trailing" secondItem="fc9-ub-BXc" secondAttribute="trailing" constant="16" id="q7Z-rU-rIt"/>
                                             <constraint firstItem="aYQ-k4-NaY" firstAttribute="leading" secondItem="ZVI-pr-WuJ" secondAttribute="leading" constant="16" id="rRG-De-L4W"/>
                                             <constraint firstAttribute="bottom" secondItem="Z5C-2T-Tdn" secondAttribute="bottom" constant="20" id="sN8-AH-k4N"/>
                                             <constraint firstAttribute="trailing" secondItem="Lwu-xe-gQT" secondAttribute="trailing" constant="16" id="szf-Yl-Ro2"/>
@@ -944,6 +973,7 @@
                         <outlet property="lblProviderType" destination="pBv-Jc-TOo" id="bW8-5I-CiV"/>
                         <outlet property="scrollContentView" destination="ZVI-pr-WuJ" id="jYe-HC-1Ll"/>
                         <outlet property="scrollView" destination="6CX-Nh-Jdi" id="k5g-hz-IX4"/>
+                        <outlet property="txtAddress" destination="LL4-iP-bdJ" id="Kmh-it-jCI"/>
                         <outlet property="txtConfirmPassword" destination="BgN-Qe-caW" id="UNg-1e-ecg"/>
                         <outlet property="txtEmailAddress" destination="cSj-XC-jz5" id="22m-sW-MAk"/>
                         <outlet property="txtFirstName" destination="tov-7S-kjs" id="OiN-Nf-XDs"/>
@@ -951,6 +981,7 @@
                         <outlet property="txtPassword" destination="xYr-6m-dQI" id="5Ac-yz-mal"/>
                         <outlet property="txtPhone" destination="yev-tX-U74" id="8Ro-tY-WCH"/>
                         <outlet property="uploadImageView" destination="lIL-iR-kSG" id="2Ad-OE-ThH"/>
+                        <outlet property="viewAddress" destination="fc9-ub-BXc" id="xfy-4d-s99"/>
                         <outlet property="viewConfirmPassword" destination="aYQ-k4-NaY" id="A9C-nV-QQn"/>
                         <outlet property="viewEmailAddress" destination="uXi-Mu-1LB" id="8Ac-gt-Rds"/>
                         <outlet property="viewFirstName" destination="p3k-21-4kV" id="TG6-Et-q00"/>

@@ -98,17 +98,7 @@ class ChatDetailViewController: UIViewController {
         messageSocketObservers()
         self.getJobMessages()
         
-//        self.title = threadInfo.clientDisplayName
-//        setupUserButton()
-        
-//        if(threadInfo.clientID != nil){
-//            clientID = threadInfo.clientID
-//            providerID = threadInfo.providerID
-//        }
-        
         setupScreenTitle()
-        
-        
         NotificationCenter.default.addObserver(self, selector: #selector(self.didPlayToEnd), name: .AVPlayerItemDidPlayToEndTime, object: nil)
     }
     
@@ -127,10 +117,10 @@ class ChatDetailViewController: UIViewController {
     {
         // UIScreen.main.bounds.width
         let customView = UIView()
-        customView.frame = CGRect.init(x: 0, y: 0, width: 150, height: 44.0)
+        customView.frame = CGRect.init(x: 0, y: 0, width: UIScreen.main.bounds.width, height: 45.0)
         
         let userButton = UIButton()
-        userButton.frame = CGRect.init(x: 0, y: 5, width: 34, height: 34)
+        userButton.frame = CGRect.init(x: customView.frame.width - 100, y: 5, width: 35, height: 35)
         userButton.isUserInteractionEnabled = false
         var imageUrl = ""
         if let newStr = clientImageURL, newStr.count > 0 {
@@ -151,43 +141,67 @@ class ChatDetailViewController: UIViewController {
         let attrString = NSMutableAttributedString(string: clientName,
                                                    attributes: [ NSAttributedString.Key.font: UIFont(name: "Helvetica-Bold", size: 16.0)!,
                                                                  NSAttributedString.Key.foregroundColor: UIColor.white])
-        
-        
-        
-//        attrString.append(NSMutableAttributedString(string: providerCategory,
-//                                                    attributes: [NSAttributedString.Key.font: UIFont(name: "Helvetica-Light", size: 12.0)!,
-//                                                    NSAttributedString.Key.foregroundColor: UIColor.white]))
-        
-        let label = UILabel(frame: CGRect(x: 40.0, y: 0.0, width: UIScreen.main.bounds.width-40, height: 44.0))
+
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width-40, height: 45.0))
         label.backgroundColor = UIColor.clear
         label.numberOfLines = 0
         label.textAlignment = NSTextAlignment.left
         label.attributedText = attrString
         customView.addSubview(label)
         
+        let rateButton = UIButton()
+        rateButton.frame = CGRect.init(x: userButton.frame.origin.x - 85, y: 5, width: 80, height: 35)
+        rateButton.setTitle("Rate Me", for: .normal)
+        rateButton.setTitleColor(.white, for: .normal)
+        rateButton.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        rateButton.addTarget(self, action: #selector(rateBtnAction), for: .touchUpInside)
+        customView.addSubview(rateButton)
+        
+        let tooltip = UIButton()
+        tooltip.frame = CGRect.init(x: rateButton.frame.origin.x - 50, y: 0, width: 80, height: 45)
+        tooltip.setTitle("?", for: .normal)
+        tooltip.setTitleColor(.white, for: .normal)
+        tooltip.titleLabel?.font = UIFont.systemFont(ofSize: 22, weight: .bold)
+        tooltip.addTarget(self, action: #selector(toolBtnAction), for: .touchUpInside)
+        customView.addSubview(tooltip)
         
 //        let tap = UITapGestureRecognizer(target: self, action: #selector(self.viewProfile(_:)))
 //        customView.addGestureRecognizer(tap)
         
         self.navigationItem.titleView = customView
     }
-    /*
-    func setupUserButton() {
-        if let newStr = threadInfo.clientProfileImageURL, newStr.count > 0 {
-            var uri = newStr
-            uri.remove(at: (newStr.startIndex))
-            let imageUrl = URLConfiguration.ServerUrl + uri
-            
-            if let url = URL(string: imageUrl) {
-                userBtn.kf.setImage(with: url, for: .normal, placeholder: UIImage(named: "imagePlaceholder"), options: nil, progressBlock: nil) { (image, error, cacheTyle, uurl) in
-                    self.userBtn.setImage(image, for: .normal)
-                }
-            }
-        }
-        
-        userBtn.cornerRadius = 33 / 2
+    
+    @objc func toolBtnAction()
+    {
+        let alert = UIAlertView(title: "Rate Me", message: "A request will go to the customer for rating.", delegate: nil, cancelButtonTitle: "OK")
+        alert.show()
     }
-    */
+    
+    @objc func rateBtnAction()
+    {
+        if !Connection.isInternetAvailable()
+        {
+            print("FIXXXXXXXX Internet not connected")
+            Connection.showNetworkErrorView()
+            return;
+        }
+
+        showProgressHud(viewController: self)
+        print(AppUser.getUser()?._id)
+        Api.userApi.sendRateRequest(providerID: AppUser.getUser()?._id ?? "", clientID: self.clientID, completion: { (flag, message) in
+
+            hideProgressHud(viewController: self)
+
+            if (flag)
+            {
+                self.showInfoAlertWith(title: "Success", message: "Request has been sent successfully.")
+            }
+            else
+            {
+                self.showInfoAlertWith(title: "Error", message: message)
+            }
+        })
+    }
     
     @objc func viewProfile(_ sender: UITapGestureRecognizer? = nil)
     {
@@ -199,11 +213,7 @@ class ChatDetailViewController: UIViewController {
                     return
                 }
             }
-            
-
         }
-        
-        
         
         // handling code
         let storyBoard = UIStoryboard(name: "Main", bundle: nil)
@@ -212,7 +222,8 @@ class ChatDetailViewController: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    @IBAction func gotoProfileAction(_ sender: UIButton) {
+    @IBAction func gotoProfileAction(_ sender: UIButton)
+    {
         
     }
     

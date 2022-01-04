@@ -15,7 +15,6 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
     
     @IBOutlet var clientDetailView: UIView!
     @IBOutlet weak var imgClient: UIImageView!
-    
     @IBOutlet weak var lblClientName: UILabel!
     @IBOutlet weak var lblClientAddress: UILabel!
     @IBOutlet weak var mapView: MKMapView!
@@ -25,6 +24,7 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var btnQuote: UIButton!
     @IBOutlet weak var btnAccept: UIButton!
+    @IBOutlet weak var btnChat: UIButton!
     @IBOutlet weak var imageBudget: UIImageView!
     @IBOutlet weak var heightConstraintsImage: NSLayoutConstraint!
     @IBOutlet weak var btnOK: UIButton!
@@ -56,12 +56,13 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         super.didReceiveMemoryWarning()
     }
     
-    func viewInitializer() {
-        
+    func viewInitializer()
+    {   
         if isFromHistory
         {
             self.btnOK.isHidden = false
             
+            self.btnChat.isHidden = true
             self.btnAccept.isHidden = true
             self.btnQuote.isHidden = true
             
@@ -70,8 +71,10 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         }
         else
         {
-            self.btnAccept.isHidden = false
-            self.btnQuote.isHidden = false
+//            self.btnAccept.isHidden = false
+//            self.btnQuote.isHidden = false
+            self.btnChat.isHidden = false
+            self.btnChat.layer.cornerRadius = self.btnChat.frame.height/2
             self.btnOK.isHidden = true
             
             if tabBarBtn.rawValue == TabBarButtonActive.jobs.rawValue {
@@ -166,6 +169,7 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         vc.clientID       = jobDetail.clientID
         vc.clientName     = jobDetail.displayName
         vc.clientImageURL = jobDetail.profileImageURL
+        vc.providerID     = jobDetail.providerID != nil ? jobDetail.providerID : ""
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

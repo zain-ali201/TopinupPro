@@ -72,6 +72,7 @@ struct URLConfiguration
     static let loginURL = serverURL + "/api/providers/signin" 
     static let signUpURL = serverURL + "/api/auth/provider"
     static let isEmailExistURL = serverURL + "/api/providers/email/"
+    static let rateProvider = serverURL + "/api/providers/"
     static let getProviderListURL = serverURL + ""
     static let forgotPasswordURL = serverURL + "/api/auth/forgot"
     static let changePasswordURL = serverURL + "/api/users/password"

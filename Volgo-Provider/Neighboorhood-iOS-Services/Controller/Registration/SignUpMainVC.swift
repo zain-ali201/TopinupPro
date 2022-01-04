@@ -9,18 +9,19 @@
 import UIKit
 import IQKeyboardManagerSwift
 import SKCountryPicker
+import CoreLocation
 
 let selectProvider = "Select provider type"
 
-enum Accessibility {
+enum Accessibility
+{
     public static let selectCountryPicker = "Select country picker"
     public static let searchCountry = "Search country name here.."
     public static let cross = "Cross button"
 }
 
-
-class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControllerDelegate, UINavigationControllerDelegate, ProviderTypeDelegate  {
-
+class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControllerDelegate, UINavigationControllerDelegate, ProviderTypeDelegate, CLLocationManagerDelegate
+{
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var viewFirstName: UIView!
     @IBOutlet weak var viewLastName: UIView!
@@ -29,6 +30,7 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
     @IBOutlet weak var viewConfirmPassword: UIView!
     @IBOutlet weak var viewProviderType: UIView!
     @IBOutlet weak var viewPhone: UIView!
+    @IBOutlet weak var viewAddress: UIView!
     //@IBOutlet weak var viewCompanyCode: UIView!
     @IBOutlet weak var viewTermsAndCondition: UIView!
     
@@ -42,7 +44,7 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
     @IBOutlet weak var countryCodeButton: UIButton!
     @IBOutlet weak var countryImageView: UIImageView!
     @IBOutlet weak var txtPhone: UITextField!
-    
+    @IBOutlet weak var txtAddress: UITextField!
     
     @IBOutlet weak var txtCompanyCode: UITextField!
     @IBOutlet weak var txtConfirmPassword: UITextField!
@@ -72,8 +74,19 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
     
     var selectedProviderTypes = [String]()
     
+    let locationManager = CLLocationManager()
+    
+    var city = ""
+    var country = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.locationManager.delegate = self
+        self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        self.locationManager.requestWhenInUseAuthorization()
+        self.locationManager.requestLocation()
+        self.locationManager.startUpdatingLocation()
         
         IQKeyboardManager.shared.enable = true
         self.relaodChoreCategoryView(choresCategories: self.allSelectedChoreCategories)
@@ -85,13 +98,49 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         super.didReceiveMemoryWarning()
     }
     
-    func viewInitializer() {
-        
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
+    {
+        if let location = locations.first {
+            self.getAddressFromLatLon(pdblLatitude: location.coordinate.latitude, withLongitude: location.coordinate.longitude)
+            self.locationManager.stopUpdatingLocation()
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error occured \(error.localizedDescription)")
+    }
+    
+    func getAddressFromLatLon(pdblLatitude: CLLocationDegrees, withLongitude pdblLongitude: CLLocationDegrees)
+    {
+        let geoCoder: CLGeocoder = CLGeocoder()
+        let loc: CLLocation = CLLocation(latitude:pdblLatitude, longitude: pdblLongitude)
 
-        
-        
-        
-        
+        geoCoder.reverseGeocodeLocation(loc, completionHandler:
+        {(placemarks, error) in
+            if (error != nil)
+            {
+                print("reverse geodcode fail: \(error!.localizedDescription)")
+            }
+            let pm = placemarks! as [CLPlacemark]
+
+            if pm.count > 0
+            {
+                let pm = placemarks![0]
+                
+                if pm.locality != nil {
+                    self.city = pm.locality!
+                }
+                if pm.country != nil {
+                    self.country = pm.country!
+                }
+                
+                self.txtAddress.text = "\(self.city), \(self.country)"
+            }
+        })
+    }
+    
+    func viewInitializer()
+    {
         let upload = UITapGestureRecognizer(target: self, action: #selector(ProfileVC.updateImage))
         self.uploadImageView.addGestureRecognizer(upload)
         self.uploadImageView.layer.cornerRadius = self.uploadImageView.frame.size.height/2
@@ -103,13 +152,9 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         self.viewConfirmPassword.layer.cornerRadius = self.viewConfirmPassword.frame.height/2
         self.viewPassword.layer.cornerRadius = self.viewPassword.frame.height/2
         self.viewPhone.layer.cornerRadius = self.viewPhone.frame.height/2
+        self.viewAddress.layer.cornerRadius = self.viewAddress.frame.height/2
         self.btnSignUp.layer.cornerRadius = self.btnSignUp.frame.height/2
         self.viewProviderType.layer.cornerRadius = self.viewProviderType.frame.height/2
-        //self.viewCompanyCode.layer.cornerRadius = self.viewCompanyCode.frame.height/2
-        
-        
-        
-        
         
         isPasswordEyeEnable = false
         isConfirmPasswordEyeEnable = false
@@ -122,10 +167,10 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(SignUpMainVC.selectProviderType))
         self.viewProviderType.addGestureRecognizer(tap)
-        
     }
     
-    func countryCodeInitializer(){
+    func countryCodeInitializer()
+    {
         guard let country = CountryManager.shared.currentCountry else {
             self.countryCodeButton.setTitle("N/A", for: .normal)
             self.countryImageView.isHidden = true
@@ -140,112 +185,59 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
         CountryManager.shared.addFilter(.countryDialCode)
     }
     
-    @objc func updateImage() {
-            
-            isProfile = true
-            let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
-            
-            let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
-                print("Cancel")
-            }
-            actionSheet.addAction(cancelActionButton)
-            
-            let galleryActionButton = UIAlertAction(title: "Gallery", style: .default)
-            { _ in
-                print("gallery")
-                self.openGallary()
-                
-            }
-            actionSheet.addAction(galleryActionButton)
-            
-            let cameraActionButton = UIAlertAction(title: "Camera", style: .default)
-            { _ in
-                print("camera")
-                self.openCamera()
-            }
-            actionSheet.addAction(cameraActionButton)
-            
-           
-            
-    //        actionSheet.popoverPresentationController?.sourceView = sender
-    //        actionSheet.popoverPresentationController?.sourceRect = sender.bounds
-            self.present(actionSheet, animated: true, completion: nil)
-            
-            
-            
-    //        let imagePickerController = UIImagePickerController()
-    //        imagePickerController.delegate = self
-    //        imagePickerController.allowsEditing = true
-    //
-    //        if (UIImagePickerController.isSourceTypeAvailable(.camera))
-    //        {
-    //            let actionSheetController: UIAlertController = UIAlertController(title: nil, message:nil, preferredStyle: .actionSheet)
-    //
-    //            let cancelActionButton: UIAlertAction = UIAlertAction(title: "Cancel", style: .cancel) { action -> Void in
-    //                print("Cancel")
-    //            }
-    //            actionSheetController.addAction(cancelActionButton)
-    //
-    //
-    //
-    //            let cameraActionButton: UIAlertAction = UIAlertAction(title: "Use Camera", style: .default)
-    //            { action -> Void in
-    //
-    //                imagePickerController.sourceType = .camera
-    //                self.present(imagePickerController, animated: true, completion: nil)
-    //            }
-    //            actionSheetController.addAction(cameraActionButton)
-    //
-    //            let galleryActionButton: UIAlertAction = UIAlertAction(title: "Choose From Gallery", style: .default)
-    //            { action -> Void in
-    //
-    //                imagePickerController.sourceType = .photoLibrary
-    //
-    //
-    //                self.present(imagePickerController, animated: true, completion: nil)
-    //            }
-    //            actionSheetController.addAction(galleryActionButton)
-    //
-    //            self.present(actionSheetController, animated: true, completion: nil)
-    //        }
-    //        else
-    //        {
-    //            // If on Simulator, open the gallery straight away
-    //
-    //            imagePickerController.sourceType = .photoLibrary
-    //            self.present(imagePickerController, animated: true, completion: nil)
-    //        }
+    @objc func updateImage()
+    {
+        isProfile = true
+        let actionSheet = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let cancelActionButton = UIAlertAction(title: "Cancel", style: .cancel) { _ in
+            print("Cancel")
         }
+        actionSheet.addAction(cancelActionButton)
+        
+        let galleryActionButton = UIAlertAction(title: "Gallery", style: .default)
+        { _ in
+            print("gallery")
+            self.openGallary()
+            
+        }
+        actionSheet.addAction(galleryActionButton)
+        
+        let cameraActionButton = UIAlertAction(title: "Camera", style: .default)
+        { _ in
+            print("camera")
+            self.openCamera()
+        }
+        actionSheet.addAction(cameraActionButton)
+        self.present(actionSheet, animated: true, completion: nil)
+    }
     
     func openGallary()
     {
-        //self.presentedViewController?.dismiss(animated: false, completion: nil)
         let picker = UIImagePickerController()
         picker.delegate = self
         picker.allowsEditing = false
         picker.sourceType = UIImagePickerController.SourceType.photoLibrary
         picker.mediaTypes = ["public.image"]
         present(picker, animated: true, completion: nil)
-        
     }
     
     func openCamera()
+    {
+        if(UIImagePickerController.isSourceTypeAvailable(.camera))
         {
-            if(UIImagePickerController.isSourceTypeAvailable(.camera))
-            {
-                let picker = UIImagePickerController()
-                picker.delegate = self
-                picker.allowsEditing = false
-                picker.sourceType = UIImagePickerController.SourceType.camera
-    //            picker.cameraCaptureMode = .photo
-                picker.mediaTypes = ["public.image"]
-                present(picker, animated: true, completion: nil)
-            }
-            else
-            {
-                openGallary()
-            }
+            let picker = UIImagePickerController()
+            picker.delegate = self
+            picker.allowsEditing = false
+            picker.sourceType = UIImagePickerController.SourceType.camera
+            picker.mediaTypes = ["public.image"]
+            present(picker, animated: true, completion: nil)
         }
+        else
+        {
+            openGallary()
+        }
+    }
     
     @objc func selectProviderType() {
         self.performSegue(withIdentifier: "SelectProviderTypeSegue", sender: nil)
@@ -284,8 +276,6 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
                     return
                 }
             }
-            
-
         }
         
         self.performSegue(withIdentifier: "signupToLoginSegue", sender: nil)
@@ -576,6 +566,8 @@ class SignUpMainVC: UIViewController, UITextFieldDelegate,  UIImagePickerControl
             "password" : password!,
             "phone": phone!,
             "categories" : catIDs,
+            "city" : city,
+            "country" : country,
             "code" : countryCode! as String
         ]
         

@@ -52,7 +52,6 @@ class SetLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         self.mapView.addGestureRecognizer(tap)
         self.locationManager.delegate = self
         self.mapView.delegate = self
-        self.locationManager.startUpdatingLocation()
         self.mapView.showsUserLocation = true
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
         self.locationManager.requestWhenInUseAuthorization()
@@ -147,7 +146,8 @@ class SetLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         
     }
     
-    func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D, onSuccess : @escaping LocationUpdateSuccess) {
+    func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D, onSuccess : @escaping LocationUpdateSuccess)
+    {
         let geocoder = GMSGeocoder()
         geocoder.reverseGeocodeCoordinate(coordinate) { response, error in
             if let address = response?.firstResult() {
@@ -180,34 +180,12 @@ class SetLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
         }
     }
     
-    func autoCompleteQuery(searchText: String) {
-        
+    func autoCompleteQuery(searchText: String)
+    {
         if searchText.characters.count != 0 {
             self.tableView.alpha = 1
             
-//            let countryFilter = GMSAutocompleteFilter()
-//            countryFilter.country = "US"
-            
-            
             var areaBounds : GMSCoordinateBounds? = nil
-//            if let lastSavedLocation = MyLocationManager.sharedInstance.lastSavedLocation
-//            {
-//                let lat = lastSavedLocation.coordinate.latitude
-//                let long = lastSavedLocation.coordinate.longitude
-//
-//                let offset = 200.0 / 1000.0;
-//                let latMax = lat + offset;
-//                let latMin = lat - offset;
-//                let lngOffset = offset * cos(lat * M_PI / 200.0);
-//                let lngMax = long + lngOffset;
-//                let lngMin = long - lngOffset;
-//                let initialLocation = CLLocationCoordinate2D(latitude: latMax, longitude: lngMax)
-//                let otherLocation = CLLocationCoordinate2D(latitude: latMin, longitude: lngMin)
-//                areaBounds = GMSCoordinateBounds(coordinate: initialLocation, coordinate: otherLocation)
-//            }
-
-            
-            
             placesClient.autocompleteQuery(searchText, bounds: areaBounds, filter: nil, callback: { (result, error) -> Void in
                 
                 self.nearbyPlacesList.removeAll()
@@ -296,18 +274,5 @@ class SetLocationVC: UIViewController, MKMapViewDelegate, CLLocationManagerDeleg
     {
         self.view.endEditing(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-
 }
  

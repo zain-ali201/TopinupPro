@@ -29,7 +29,7 @@ pod 'Firebase/Messaging'
 pod 'SVProgressHUD'
 pod 'SKCountryPicker'
 pod 'SwiftPopup', '~> 4.2.0'
-pod 'Kingfisher'#, :git => 'https://github.com/onevcat/Kingfisher.git', :branch => "master"
+pod 'Kingfisher'
 
   # Pods for Neighboorhood-iOS-Services
 

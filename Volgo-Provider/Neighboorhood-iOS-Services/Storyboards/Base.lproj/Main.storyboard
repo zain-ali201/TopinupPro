@@ -654,6 +654,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnAccept" destination="KHi-dz-mBh" id="Zuu-J1-SEN"/>
+                        <outlet property="btnChat" destination="8Yc-Qh-tsy" id="IRd-3I-D3g"/>
                         <outlet property="btnOK" destination="xIQ-Tb-DzS" id="YI4-sw-dV5"/>
                         <outlet property="btnQuote" destination="O0V-Z5-s4O" id="oG2-ec-yLB"/>
                         <outlet property="categoryName" destination="Yg5-L1-W8M" id="5g7-p1-zp4"/>

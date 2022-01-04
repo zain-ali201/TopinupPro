@@ -42,7 +42,6 @@
 		4A012EA21FE904AA00F19878 /* HandymanNearbyVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A012EA11FE904AA00F19878 /* HandymanNearbyVO.swift */; };
 		4A012EA41FE9249B00F19878 /* JobDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A012EA31FE9249B00F19878 /* JobDetailVC.swift */; };
 		4A012EA61FE927DD00F19878 /* JobDetailCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A012EA51FE927DD00F19878 /* JobDetailCVC.swift */; };
-		4A012EA81FE9349700F19878 /* Yamsol Office.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 4A012EA71FE9349700F19878 /* Yamsol Office.gpx */; };
 		4A012EAB1FE939D300F19878 /* CustomAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A012EAA1FE939D300F19878 /* CustomAnnotationView.swift */; };
 		4A012EAD1FE939D800F19878 /* CustomChildAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A012EAC1FE939D800F19878 /* CustomChildAnnotation.xib */; };
 		4A0C6DED1FE7C1D8003AB97A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0C6DEC1FE7C1D8003AB97A /* NetworkManager.swift */; };
@@ -120,6 +119,7 @@
 		80AF933521BA70600077214F /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AF933421BA70600077214F /* Connection.swift */; };
 		C7F287E64AA0CD73C5747A76 /* Pods_Neighboorhood_iOS_Services.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B1E651CBDFC74113A8EB778 /* Pods_Neighboorhood_iOS_Services.framework */; };
 		DBB48B76DB60C06B36C63FAC /* Pods_Neighboorhood_iOS_ServicesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF563DAAB74DEA11E47F863 /* Pods_Neighboorhood_iOS_ServicesTests.framework */; };
+		FA4199992778AD210017DA86 /* SwiftyToolTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA4199982778AD210017DA86 /* SwiftyToolTip.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +177,6 @@
 		4A012EA11FE904AA00F19878 /* HandymanNearbyVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandymanNearbyVO.swift; sourceTree = "<group>"; };
 		4A012EA31FE9249B00F19878 /* JobDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailVC.swift; sourceTree = "<group>"; };
 		4A012EA51FE927DD00F19878 /* JobDetailCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailCVC.swift; sourceTree = "<group>"; };
-		4A012EA71FE9349700F19878 /* Yamsol Office.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = "Yamsol Office.gpx"; sourceTree = "<group>"; };
 		4A012EAA1FE939D300F19878 /* CustomAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomAnnotationView.swift; sourceTree = "<group>"; };
 		4A012EAC1FE939D800F19878 /* CustomChildAnnotation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomChildAnnotation.xib; sourceTree = "<group>"; };
 		4A0C6DEC1FE7C1D8003AB97A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -265,11 +264,12 @@
 		57577CDE59B095068E5621BC /* Pods-Neighboorhood-iOS-ServicesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neighboorhood-iOS-ServicesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neighboorhood-iOS-ServicesTests/Pods-Neighboorhood-iOS-ServicesTests.release.xcconfig"; sourceTree = "<group>"; };
 		6BF563DAAB74DEA11E47F863 /* Pods_Neighboorhood_iOS_ServicesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neighboorhood_iOS_ServicesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		80AF933421BA70600077214F /* Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
-		80BF541621CE4D9A000D7677 /* Kalma Chowk.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Kalma Chowk.gpx"; sourceTree = "<group>"; };
+		80BF541621CE4D9A000D7677 /* Gill Road.gpx */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "Gill Road.gpx"; sourceTree = "<group>"; };
 		83468723037C27A391A08678 /* Pods_Neighboorhood_iOS_ServicesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neighboorhood_iOS_ServicesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6D65EE6F9CD16FAFA639ECA /* Pods-Neighboorhood-iOS-ServicesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neighboorhood-iOS-ServicesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neighboorhood-iOS-ServicesTests/Pods-Neighboorhood-iOS-ServicesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A816E42A62E3D2D803191127 /* Pods-Neighboorhood-iOS-Services.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neighboorhood-iOS-Services.release.xcconfig"; path = "Pods/Target Support Files/Pods-Neighboorhood-iOS-Services/Pods-Neighboorhood-iOS-Services.release.xcconfig"; sourceTree = "<group>"; };
 		BFABADF0F755043C46494994 /* Pods-Neighboorhood-iOS-ServicesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neighboorhood-iOS-ServicesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Neighboorhood-iOS-ServicesUITests/Pods-Neighboorhood-iOS-ServicesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		FA4199982778AD210017DA86 /* SwiftyToolTip.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftyToolTip.swift; path = "Neighboorhood-iOS-Services/SwiftyToolTip.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -533,9 +533,8 @@
 			isa = PBXGroup;
 			children = (
 				18589D4326B828AC00B3D026 /* GoogleService-Info.plist */,
-				80BF541621CE4D9A000D7677 /* Kalma Chowk.gpx */,
+				80BF541621CE4D9A000D7677 /* Gill Road.gpx */,
 				4AC0AEA7206190BE00DC621E /* GoogleMaps.bundle */,
-				4A012EA71FE9349700F19878 /* Yamsol Office.gpx */,
 				4A5610441FE3986900B0FE1D /* Neighboorhood-iOS-Services */,
 				4A5610591FE3986900B0FE1D /* Neighboorhood-iOS-ServicesTests */,
 				4A5610641FE3986900B0FE1D /* Neighboorhood-iOS-ServicesUITests */,
@@ -558,6 +557,7 @@
 		4A5610441FE3986900B0FE1D /* Neighboorhood-iOS-Services */ = {
 			isa = PBXGroup;
 			children = (
+				FA4199982778AD210017DA86 /* SwiftyToolTip.swift */,
 				4A1BC48820CFDEB9008B8EFD /* Neighboorhood-iOS-Services.entitlements */,
 				4A5610961FE3FE2D00B0FE1D /* Assets.xcassets */,
 				18589D4526B828D300B3D026 /* Storyboards */,
@@ -782,7 +782,6 @@
 				4AC0AEA8206190BE00DC621E /* GoogleMaps.bundle in Resources */,
 				18589D4426B828AC00B3D026 /* GoogleService-Info.plist in Resources */,
 				4A5610931FE3FDCC00B0FE1D /* Login.storyboard in Resources */,
-				4A012EA81FE9349700F19878 /* Yamsol Office.gpx in Resources */,
 				4ABF1B98206B8CE600D2BFA0 /* ChooseChoreCategory.xib in Resources */,
 				4AE4B31C2087317A0005F2BF /* MessageList.xib in Resources */,
 				4A012E9C1FE8FA4F00F19878 /* JobList.xib in Resources */,
@@ -1033,6 +1032,7 @@
 				4A0C6DF61FE7D43C003AB97A /* UserVO.swift in Sources */,
 				4A56108D1FE3FD3400B0FE1D /* LoginVC.swift in Sources */,
 				4A729196200FD59D00A48123 /* NearbyProviderVO.swift in Sources */,
+				FA4199992778AD210017DA86 /* SwiftyToolTip.swift in Sources */,
 				4A5CFCE31FEA7EFD003007EB /* ProposedJobVO.swift in Sources */,
 				4A012EA41FE9249B00F19878 /* JobDetailVC.swift in Sources */,
 				4AAECFA3200293D6008BA704 /* JobHistoryApi.swift in Sources */,

@@ -100,6 +100,36 @@ class UserApi : NSObject {
         }
     }
     
+    func sendRateRequest(providerID : String, clientID : String, completion: @escaping ((_ emailAvailable: Bool, _ message : String) -> Void))
+    {
+        let urlString = "\(URLConfiguration.rateProvider)\(providerID)/ask-to-rate/\(clientID)"
+        print(urlString)
+        Alamofire.request(urlString).responseJSON { response in
+            print(response.result as Any)   // result of response serialization
+            
+            if let result = response.result.value
+            {
+                let swiftyJsonVar = JSON(result)
+                print(swiftyJsonVar)
+                
+                let isSuccessful = swiftyJsonVar["status"].string
+                if isSuccessful == "success"
+                {
+                    completion(true, "success")
+                }
+                else
+                {
+                    let msg = swiftyJsonVar["message"].string
+                    completion(false, msg ?? "Please try again later.")
+                }
+            }
+            else
+            {
+                completion(false, "Unable to retrieve response from server. Please try later")
+            }
+        }
+    }
+    
     func forgotPasswordOf(email : String, completion: @escaping ((_ emailAvailable: Bool, _ message : String) -> Void))
     {
         let params = ["usernameOrEmail" : email]
