@@ -231,23 +231,26 @@ class JobStartDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDel
         
         totalAmount = Double(self.jobDetail.budget ?? "0.0")!
         
-        if self.jobDetail.type == JobType.hourly.rawValue
+        if self.jobDetail.budget != nil && self.jobDetail.budget != ""
         {
-            self.lblRate.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!) + "/hr"
-            self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
-            self.lblHourlyFixed.text = "Job Rate"
-            self.lblRateType.text = "Total"
-            self.lblRate.isHidden = false
-            self.lblHourlyFixed.isHidden = false
-            jobType = JobType(rawValue: JobType.hourly.rawValue)
-        }
-        else if self.jobDetail.type == JobType.fixed.rawValue
-        {
-            self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
-            self.lblRateType.text = "Fixed Job Rate"
-            self.lblRate.isHidden = true
-            self.lblHourlyFixed.isHidden = true
-            jobType = JobType(rawValue: JobType.fixed.rawValue)
+            if self.jobDetail.type == JobType.hourly.rawValue
+            {
+                self.lblRate.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!) + "/hr"
+                self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
+                self.lblHourlyFixed.text = "Job Rate"
+                self.lblRateType.text = "Total"
+                self.lblRate.isHidden = false
+                self.lblHourlyFixed.isHidden = false
+                jobType = JobType(rawValue: JobType.hourly.rawValue)
+            }
+            else if self.jobDetail.type == JobType.fixed.rawValue
+            {
+                self.lblTotal.text = (self.jobDetail.currency)+" "+String(describing: self.jobDetail.budget!)
+                self.lblRateType.text = "Fixed Job Rate"
+                self.lblRate.isHidden = true
+                self.lblHourlyFixed.isHidden = true
+                jobType = JobType(rawValue: JobType.fixed.rawValue)
+            }
         }
         
         self.lblScheduled.text = DateUtil.getSimpleDateAndTime(self.jobDetail.when.dateFromISO8601!)

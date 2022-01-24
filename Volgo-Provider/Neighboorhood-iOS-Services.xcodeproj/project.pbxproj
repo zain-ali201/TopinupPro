@@ -101,7 +101,6 @@
 		4ABF1B98206B8CE600D2BFA0 /* ChooseChoreCategory.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ABF1B97206B8CE600D2BFA0 /* ChooseChoreCategory.xib */; };
 		4ABF1B9A206B8CED00D2BFA0 /* ChooseChoreCategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF1B99206B8CED00D2BFA0 /* ChooseChoreCategoryTVC.swift */; };
 		4ABF1B9C206B8DC800D2BFA0 /* ChooseProviderTypeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ABF1B9B206B8DC800D2BFA0 /* ChooseProviderTypeVC.swift */; };
-		4AC0AEA8206190BE00DC621E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4AC0AEA7206190BE00DC621E /* GoogleMaps.bundle */; };
 		4AC19C651FEBD32200AEE0A6 /* ReceiptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC19C641FEBD32200AEE0A6 /* ReceiptVC.swift */; };
 		4ACF95B8207249CE00A44D05 /* ProviderJobRequestVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACF95B7207249CE00A44D05 /* ProviderJobRequestVO.swift */; };
 		4AE4B31C2087317A0005F2BF /* MessageList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AE4B31B2087317A0005F2BF /* MessageList.xib */; };
@@ -779,7 +778,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18286F24231A37B200F300F5 /* Chat.storyboard in Resources */,
-				4AC0AEA8206190BE00DC621E /* GoogleMaps.bundle in Resources */,
 				18589D4426B828AC00B3D026 /* GoogleService-Info.plist in Resources */,
 				4A5610931FE3FDCC00B0FE1D /* Login.storyboard in Resources */,
 				4ABF1B98206B8CE600D2BFA0 /* ChooseChoreCategory.xib in Resources */,

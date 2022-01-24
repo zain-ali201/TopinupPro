@@ -97,13 +97,16 @@ class ReceiptVC: UIViewController {
         self.lblAddress.text = self.jobDetail.wheree
         self.lblTotalAmount.text = (self.jobDetail.currency) + " " + String(describing: self.jobDetail.budget!)
         
-        if jobType.rawValue == JobType.hourly.rawValue
+        if self.jobDetail.budget != nil && self.jobDetail.budget != ""
         {
-            self.lblTotalAmount.text = (self.jobDetail.currency) + String(format: "%.2f", totalAmount)
-        }
-        else if jobType.rawValue == JobType.fixed.rawValue
-        {
-            self.lblTotalAmount.text = (self.jobDetail.currency) + String(describing: self.jobDetail.budget!)
+            if jobType.rawValue == JobType.hourly.rawValue
+            {
+                self.lblTotalAmount.text = (self.jobDetail.currency) + String(format: "%.2f", totalAmount)
+            }
+            else if jobType.rawValue == JobType.fixed.rawValue
+            {
+                self.lblTotalAmount.text = (self.jobDetail.currency) + String(describing: self.jobDetail.budget!)
+            }
         }
     }
     

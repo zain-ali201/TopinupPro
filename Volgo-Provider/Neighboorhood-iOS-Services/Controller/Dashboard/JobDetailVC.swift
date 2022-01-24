@@ -274,30 +274,27 @@ class JobDetailVC: UIViewController, MKMapViewDelegate, UICollectionViewDelegate
         let numberFormatter = NumberFormatter()
         numberFormatter.numberStyle = .decimal
         
-        if self.jobDetail.type == "hourly"
+        if self.jobDetail.budget != nil && self.jobDetail.budget != ""
         {
-            //imageBudget.image = UIImage(named: "watch")
-            let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
-            self.lblBudget.text = (self.jobDetail.currency)+" "+String(describing: formattedNumber!) + "/hr"
-            
-            //self.heightConstraintsImage.constant = 24
+            if self.jobDetail.type == "hourly"
+            {
+                //imageBudget.image = UIImage(named: "watch")
+                let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
+                self.lblBudget.text = (self.jobDetail.currency)+" "+String(describing: formattedNumber!) + "/hr"
+                
+                //self.heightConstraintsImage.constant = 24
+            }
+            else
+            {
+                let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
+                   
+                //imageBudget.image = UIImage(named: "coin")
+                self.lblBudget.text = (self.jobDetail.currency)+" "+String(describing: formattedNumber!) + ""
+                self.jobType.text = "Fixed Budget"
+                //self.heightConstraintsImage.constant = 18
+            }
         }
-        else
-        {
-             let formattedNumber = numberFormatter.string(from: NSNumber(value:Int(self.jobDetail.budget)!))
-            
-            //imageBudget.image = UIImage(named: "coin")
-            self.lblBudget.text = (self.jobDetail.currency)+" "+String(describing: formattedNumber!) + ""
-            self.jobType.text = "Fixed Budget"
-            //self.heightConstraintsImage.constant = 18
-        }
-//        let data = setImageWithUrl(url: self.jobDetail.categoryImageURL!)
-//        DispatchQueue.main.async {
-//            self.imgClient.layer.cornerRadius = self.imgClient.frame.height/2
-//            self.imgClient.image = UIImage(data: data!)
-//        }
-        
-        
+
         self.imgClient.layer.cornerRadius = self.imgClient.frame.height/2
         
         var newStr = self.jobDetail.profileImageURL!

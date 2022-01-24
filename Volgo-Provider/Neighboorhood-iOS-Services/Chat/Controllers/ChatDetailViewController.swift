@@ -266,13 +266,12 @@ class ChatDetailViewController: UIViewController {
     }
     
     func newJobMessages(newMessage : String) {
-        
         if !Connection.isInternetAvailable() {
             Connection.showNetworkErrorView()
-            return;
+            return
         }
         
-        let params = ["jobId" : jobID, "message" : newMessage, "receiverId":clientID , "userType" : "provider"] as [String : Any]
+        let params = ["jobId" : jobID, "message" : newMessage, "receiverId":clientID , "userType" : "provider", "providerId" : AppUser.getUser()?._id ?? "", "clientId" : self.clientID] as [String : Any]
         
         print(params)
         
@@ -327,8 +326,6 @@ class ChatDetailViewController: UIViewController {
     
     @objc func didReceiveAddMessagesResponse(notification : Notification)
     {
-        
-        
         print("Responce \(notification)")
         
         let userInfo = notification.userInfo as! NSDictionary
