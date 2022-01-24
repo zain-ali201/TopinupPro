@@ -260,7 +260,7 @@ class ChatDetailViewController: UIViewController {
             return;
         }
         
-        let params = ["jobId" : jobID] as [String : Any]
+        let params = ["jobId" : jobID, "clientId" : self.clientID, "providerId" : AppUser.getUser()?._id ?? ""] as [String : Any]
         SocketManager.shared.sendSocketRequest(name: SocketEvent.GetJobThreadMessages, params: params)
         showProgressHud(viewController: self)
     }
@@ -280,7 +280,7 @@ class ChatDetailViewController: UIViewController {
     }
     
     func readMessageInfo() {
-        let params = ["msgThreadId" : msgThreadID, "senderId": self.clientID, "userId": self.providerID] as [String : Any]
+        let params = ["msgThreadId" : msgThreadID, "senderId": self.clientID, "userId": self.providerID, "providerId" : AppUser.getUser()?._id ?? "", "clientId" : self.clientID] as [String : Any]
         SocketManager.shared.sendSocketRequest(name: SocketEvent.READ_MESSAGE, params: params)
         SocketManager.shared.sendSocketRequest(name: SocketEvent.SOCKET_MARK_RECEIVED, params: params)
         SocketManager.shared.sendSocketRequest(name: SocketEvent.SOCKET_UPDATE_STATUS, params: params)

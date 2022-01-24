@@ -205,9 +205,6 @@ class ProposedJobVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
             
             if success
             {
-                
-                
-                
                 let alert = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
                       switch action.style{
@@ -223,8 +220,6 @@ class ProposedJobVC: BaseViewController, UITableViewDelegate, UITableViewDataSou
 
                 }}))
                 self.present(alert, animated: true, completion: nil)
-                
-
             }
             else
             {

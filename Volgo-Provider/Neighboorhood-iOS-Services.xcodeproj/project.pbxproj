@@ -1231,7 +1231,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.topinup.provider;
 				PRODUCT_NAME = "Topinup Professionals";
 				PROVISIONING_PROFILE = "ba95b848-16e9-45a0-93bc-eabb797ba443";
-				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Dev v2";
+				PROVISIONING_PROFILE_SPECIFIER = "TopinupProvider Dev v1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Neighboorhood-iOS-Services/External/Neighboorhood-iOS-Services-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
@@ -1258,7 +1258,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.topinup.provider;
 				PRODUCT_NAME = "Topinup Professionals";
 				PROVISIONING_PROFILE = "ba95b848-16e9-45a0-93bc-eabb797ba443";
-				PROVISIONING_PROFILE_SPECIFIER = "Topinup Provider Dist v3";
+				PROVISIONING_PROFILE_SPECIFIER = "Topinup Provider Dist v1";
 				SWIFT_OBJC_BRIDGING_HEADER = "Neighboorhood-iOS-Services/External/Neighboorhood-iOS-Services-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;

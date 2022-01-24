@@ -399,15 +399,12 @@ struct SocketEvent
     static let SOCKET_MARK_RECEIVED = "getAllSentMsgs";
     static let SOCKET_MARK_READ = "updateSingeMsgStatus";
     static let SOCKET_UPDATE_STATUS = "notifyToMsgSender";
-    
-    
 }
 
 
 extension Notification.Name
 {
     // new here
-    
     static let kSocketConnected = Notification.Name("kSocketConnected")
     static let kSocketDisconnected = Notification.Name("kSocketDisconnected")
     static let KCurrentLocation = Notification.Name("KCurrentLocation")
